@@ -1,0 +1,618 @@
+@layer base {
+:root {
+    /* colors */
+    --black: #000501;
+    --tan: #b6b57b;
+    --green: #31b28a;
+    --lightgreen: #8cdfc5;
+    --red: #ff4404;
+    --white: #ffffff;
+
+    /* font families */
+    --main: "Lato", sans-serif;
+    --heading: "Josefin Sans", sans-serif;
+    --mono: "Fira mono", monospace;
+
+    /* type scale */
+    --base-size: 1.2rem;
+    --scale: 1.25;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+    --small: calc(var(--base-size) / var(--scale));
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* h/t Scott O'Hara https://css-tricks.com/inclusively-hidden/ */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    font-family: var(--main);
+    line-height: 1.5;
+    font-size: var(--base-size);
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+    text-transform: uppercase;
+}
+h1 {
+    font-size: var(--h1);
+}
+h2 {
+    font-size: var(--h2);
+}
+h3 {
+    font-size: var(--h3);
+}
+h4 {
+    font-size: var(--h4);
+}
+h5 {
+    font-size: var(--h5);
+}
+h6 {
+    font-size: var(--h6);
+}
+.mono {
+    font-family: var(--mono);
+}
+
+.colors {
+    display: flex;
+    /* you could do this with grid as well, but you may need a few more lines of code */
+}
+.colors > * {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border: 1px solid black;
+}
+.white {
+    background-color: var(--white);
+}
+.black {
+    background-color: var(--black);
+}
+.tan {
+    background-color: var(--tan);
+}
+.green {
+    background-color: var(--green);
+}
+.lightgreen {
+    background-color: var(--lightgreen);
+}
+.red {
+    background-color: var(--red);
+}
+a {
+    color: var(--green);
+}
+a:hover {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.button {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--black);
+    padding: 1rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: var(--small);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.button:hover {
+    background-color: var(--tan);
+}
+}
+@layer intro {
+.intro {
+    padding: 4rem 0 6rem 0;
+    background-image: url(../img/fem-featured-top.png), url(../img/fem-comet.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: bottom center, top center;         
+    color: var(--white);
+}
+.intro a {
+    color: var(--white);
+}
+.intro h2 {
+    text-transform: uppercase;
+}
+.name {
+    font-weight: 700;
+}
+.stars {
+    padding: 4rem 0 6rem 0;
+    background-image: url(../img/fem-featured-top.png), url(../img/fem-stars-sky.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: bottom center, top center;
+}
+header + article {
+    max-width: 500px;
+}
+}
+@layer header {
+/* originally placed so that we could see what we were doing when creating the navbar */
+/* body {
+    background-color: black;
+} */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6rem;
+}
+header h1 {
+    font-size: var(--h3);
+    color: var(--lightgreen);
+    font-weight: 300;
+    margin: 0;
+}
+header a {
+    text-decoration: none;
+    color: var(--white);
+}
+header a:hover {
+    color: var(--green);
+}
+header svg {
+    width: 30px;
+    fill: var(--white);
+    margin-top: 0.5rem;
+}
+header a:hover svg {
+    fill: var(--green);
+}
+nav {
+    font-family: var(--heading);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav .button {
+    padding: 0.6rem 0.4rem 0.4rem 0.4rem;
+    color: var(--black);
+}
+nav .button:hover {
+    color: var(--black);
+}
+@media (max-width: 830px) {
+    header {
+    justify-content: center;
+    }
+    header h1 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    }
+}
+@media (max-width: 640px) {
+    header {
+    justify-content: space-between;
+    }
+    header h1 {
+    flex-basis: auto;
+    }
+    /* hamburger button is the button HTML element */
+    header button {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    }
+    header button:hover {
+    color: var(--green);
+    }
+    header button::after {
+    content: "\2630";
+    }
+        /* menu that appears when hamburger is clicked */
+    nav {
+    position: fixed;
+    top: 0;
+    right: 200%;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background: #fff;
+    padding-top: 20%;
+    transition: right 0s 0.5s, opacity 0.5s;
+    }
+        /* trigger for animation - pulls down nav box */
+    button:focus + nav,
+    button:focus-within + nav {
+    right: 0;
+    opacity: 1;
+    transition: right 0s, opacity 0.5s;
+    }
+    nav ul {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -50vh;
+    transition: top 0.5s;
+    }
+    /* trigger for animation - makes the links in motion */
+    button:focus + nav ul,
+    button:focus-within + nav ul {
+    top: 0;
+    }
+    /* styling for links and SVGs in the mobile menu */
+    nav a:any-link:not(.button) {
+    display: block;
+    padding: 1.5rem;
+    color: var(--green);
+    }
+    nav a svg {
+    fill: var(--green);
+    }
+    nav a:hover,
+    nav a svg:hover {
+    color: var(--tan);
+    fill: var(--tan);
+    }
+    /* keep spacing even between link items */
+    nav .button {
+    margin-top: 1.5rem;
+    }
+    /* sets up the close icon - clicking anywhere not on a link will close the menu */
+    nav ul::after {
+    content: "\2716";
+    color: var(--green);
+    display: block;
+    position: absolute;
+    top: 0.125rem;
+    right: 0.5rem;
+    font-size: 3rem;
+    line-height: 1;
+    }
+}
+}
+@layer featured {
+    .section-featured {
+    background-image: url(../img/fem-feature-bottom.png),
+    url(../img/fem-feature-bkgd.png);
+    background-repeat: repeat-x, repeat;
+    background-position: bottom center, center center;
+    padding: 2rem 0 6rem 0;
+}
+.project {
+    background-image: 
+    url(../img/fem-feature-bkgd.png);
+    background-repeat: repeat;
+    background-position: center center;
+    padding: 6rem 0;
+}
+.section-featured h3 {
+    margin: 3rem 0 0 0;
+    padding: 1rem 1rem 0 1rem;
+    color: var(--white);
+    font-size: var(--h4);
+    background-color: var(--black);
+}
+.blackbox {
+    padding: 0rem 1rem 1rem 1rem;
+    color: white;
+    background-color: var(--black);
+    border-radius: 0;
+}
+.section-featured article {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.section-featured img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: block;
+    margin-top: 1rem;
+}
+    .section-featured ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    font-size: var(--small);
+    grid-row: 2/3;
+    margin-top: -1.75rem;
+}
+
+.section-featured li {
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+}
+.youtube {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 475px) {
+    .section-featured h2 {
+    font-size: var(--h4);
+    }
+}
+@media (max-width: 400px) {
+    .section-featured h2 {
+    font-size: var(--h5);
+    }
+    .section-featured h3 {
+    font-size: var(--h5);
+    }
+    .section-featured ul {
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+}
+    .section-featured li {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+}
+}
+@layer projects {
+    .section-projects {
+    background-color: var(--black);
+    padding: 2rem 0 4rem 0;
+    color: var(--white);
+}
+figure {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+}
+figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+}
+figure a {
+    color: var(--white);
+    text-decoration: none;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+figure a:hover {
+    color: var(--green);
+}
+figcaption {
+    background-color: var(--black);
+    opacity: 0.8;
+    text-align: center;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+figcaption h3 {
+    margin-bottom: 0;
+    font-size: var(--h5);
+}
+figcaption ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    font-size: var(--small);
+}
+figcaption li {
+    display: inline-block;
+}
+.topgrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+.topgrid figure:first-child {
+    grid-row: span 2;
+}
+.bottomgrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.project figure {
+    display: block;
+}
+.project figcaption {
+    background-color: transparent;
+    color: var(--black);
+    text-align: left;
+}
+figure.featured-screenshots {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+}
+.section-featured .featured-screenshots img {
+    grid-column: revert;
+    grid-row: revert;
+}
+.featured-screenshots figcaption {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+.featured-screenshots figcaption p {
+    columns: 2;
+    margin-bottom: 5rem;
+}
+.feature-image {
+    display: block;
+    margin: 5rem 0;
+}
+figure.figure-portifolio {
+    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 2rem;
+}
+.figure-portifolio img {
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.figure-portifolio figcaption {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+@media (max-width: 992px) {
+    .topgrid {
+    display: block;
+    }
+    .topgrid figure {
+            margin-bottom: 4rem;
+    }
+    .bottomgrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 6rem 2rem;
+    }
+    .bottomgrid > * {
+    flex-basis: 30%;
+    }
+    .bottomgrid img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+}
+@media (max-width: 667px) {
+    .bottomgrid {
+    gap: 2rem;
+    }
+    .bottomgrid a {
+    flex-basis: 80%;
+    }
+    .topgrid figure {
+    margin-bottom: 2rem;
+    }
+    .section-projects h2 {
+    font-size: var(--h5);
+    }
+    figcaption h3 {
+    font-size: var(--base-size);
+    }
+}
+}
+@layer contact {
+.section-contact {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--black)
+    url(../img/fem-aurora.jpg) center center;
+    color: var(--white);
+}
+.section-contact p:last-child {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+}
+@layer footer {
+footer {
+    text-align: center;
+    padding:6rem 0;
+    background: var(--black) url(../img/fem-stars.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: var(--white);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+footer svg {
+    width: 40px;
+    fill: var(--white);
+}
+footer a:hover svg {
+    fill: var(--green);
+}
+.project + footer {
+    padding-top: 0;
+}
+.bottom-trim {
+    background-image: url(../img/fem-featured-bottom.png);
+    background-repeat: repeat-x;
+    background-position: top center;
+    height: 16px;
+    padding-bottom: 4rem;
+}
+}
