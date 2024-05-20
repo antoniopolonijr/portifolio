@@ -1,5 +1,5 @@
 @layer base {
-:root {
+  :root {
     /* colors */
     --black: #000501;
     --tan: #b6b57b;
@@ -23,20 +23,20 @@
     --h5: calc(var(--h6) * var(--scale));
     --h6: var(--base-size);
     --small: calc(var(--base-size) / var(--scale));
-}
+  }
 
-/* border box model: https://css-tricks.com/box-sizing/ */
-html {
+  /* border box model: https://css-tricks.com/box-sizing/ */
+  html {
     box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
+  }
+  *,
+  *::before,
+  *::after {
     box-sizing: inherit;
-}
+  }
 
-/* h/t Scott O'Hara https://css-tricks.com/inclusively-hidden/ */
-.sr-only:not(:focus):not(:active) {
+  /* h/t Scott O'Hara https://css-tricks.com/inclusively-hidden/ */
+  .sr-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -44,93 +44,93 @@ html {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-}
+  }
 
-body {
+  body {
     font-family: var(--main);
     line-height: 1.5;
     font-size: var(--base-size);
     margin: 0;
     padding: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--heading);
     text-transform: uppercase;
-}
-h1 {
+  }
+  h1 {
     font-size: var(--h1);
-}
-h2 {
+  }
+  h2 {
     font-size: var(--h2);
-}
-h3 {
+  }
+  h3 {
     font-size: var(--h3);
-}
-h4 {
+  }
+  h4 {
     font-size: var(--h4);
-}
-h5 {
+  }
+  h5 {
     font-size: var(--h5);
-}
-h6 {
+  }
+  h6 {
     font-size: var(--h6);
-}
-.mono {
+  }
+  .mono {
     font-family: var(--mono);
-}
+  }
 
-.colors {
+  .colors {
     display: flex;
     /* you could do this with grid as well, but you may need a few more lines of code */
-}
-.colors > * {
+  }
+  .colors > * {
     width: 50px;
     height: 50px;
     margin-right: 20px;
     border: 1px solid black;
-}
-.white {
+  }
+  .white {
     background-color: var(--white);
-}
-.black {
+  }
+  .black {
     background-color: var(--black);
-}
-.tan {
+  }
+  .tan {
     background-color: var(--tan);
-}
-.green {
+  }
+  .green {
     background-color: var(--green);
-}
-.lightgreen {
+  }
+  .lightgreen {
     background-color: var(--lightgreen);
-}
-.red {
+  }
+  .red {
     background-color: var(--red);
-}
-a {
+  }
+  a {
     color: var(--green);
-}
-a:hover {
+  }
+  a:hover {
     text-decoration: none;
-}
-img {
+  }
+  img {
     max-width: 100%;
-}
-figure {
+  }
+  figure {
     margin: 0;
     padding: 0;
-}
-.container {
+  }
+  .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
-.button {
+  }
+  .button {
     display: inline-block;
     background-color: var(--green);
     color: var(--black);
@@ -142,79 +142,81 @@ figure {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1;
-}
+  }
 
-.button:hover {
+  .button:hover {
     background-color: var(--tan);
-}
+  }
 }
 @layer intro {
-.intro {
+  .intro {
     padding: 4rem 0 6rem 0;
-    background-image: url(../img/fem-featured-top.png), url(../img/fem-comet.jpg);
-    background-repeat: repeat-x, repeat;
-    background-position: bottom center, top center;         
-    color: var(--white);
-}
-.intro a {
-    color: var(--white);
-}
-.intro h2 {
-    text-transform: uppercase;
-}
-.name {
-    font-weight: 700;
-}
-.stars {
-    padding: 4rem 0 6rem 0;
-    background-image: url(../img/fem-featured-top.png), url(../img/fem-stars-sky.jpg);
+    background-image: url(../img/fem-featured-top.png),
+      url(../img/fem-comet.jpg);
     background-repeat: repeat-x, repeat;
     background-position: bottom center, top center;
-}
-header + article {
+    color: var(--white);
+  }
+  .intro a {
+    color: var(--white);
+  }
+  .intro h2 {
+    text-transform: uppercase;
+  }
+  .name {
+    font-weight: 700;
+  }
+  .stars {
+    padding: 4rem 0 6rem 0;
+    background-image: url(../img/fem-featured-top.png),
+      url(../img/fem-stars-sky.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: bottom center, top center;
+  }
+  header + article {
     max-width: 500px;
-}
+  }
 }
 @layer header {
-/* originally placed so that we could see what we were doing when creating the navbar */
-/* body {
+  /* originally placed so that we could see what we were doing when creating the navbar */
+  /* body {
     background-color: black;
 } */
-header {
+  header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 6rem;
-}
-header h1 {
+  }
+  header h1 {
     font-size: var(--h3);
     color: var(--lightgreen);
     font-weight: 300;
     margin: 0;
-}
-header a {
+  }
+  header a {
     text-decoration: none;
     color: var(--white);
-}
-header a:hover {
+  }
+  header a:hover {
     color: var(--green);
-}
-header svg {
+  }
+  header svg {
     width: 30px;
     fill: var(--white);
     margin-top: 0.5rem;
-}
-header a:hover svg {
+  }
+  header a:hover svg {
     fill: var(--green);
-}
-nav {
+  }
+  nav {
     font-family: var(--heading);
     font-weight: 600;
     margin: 0;
     padding: 0;
-}
-nav ul {
+  }
+  nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -223,148 +225,147 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}
-nav .button {
+  }
+  nav .button {
     padding: 0.6rem 0.4rem 0.4rem 0.4rem;
     color: var(--black);
-}
-nav .button:hover {
+  }
+  nav .button:hover {
     color: var(--black);
-}
-@media (max-width: 830px) {
+  }
+  @media (max-width: 830px) {
     header {
-    justify-content: center;
+      justify-content: center;
     }
     header h1 {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-}
-@media (max-width: 640px) {
+  }
+  @media (max-width: 640px) {
     header {
-    justify-content: space-between;
+      justify-content: space-between;
     }
     header h1 {
-    flex-basis: auto;
+      flex-basis: auto;
     }
     /* hamburger button is the button HTML element */
     header button {
-    display: block;
-    font-size: 3rem;
-    line-height: 1;
-    border: 0;
-    background: transparent;
-    color: var(--white);
+      display: block;
+      font-size: 3rem;
+      line-height: 1;
+      border: 0;
+      background: transparent;
+      color: var(--white);
     }
     header button:hover {
-    color: var(--green);
+      color: var(--green);
     }
     header button::after {
-    content: "\2630";
+      content: "\2630";
     }
-        /* menu that appears when hamburger is clicked */
+    /* menu that appears when hamburger is clicked */
     nav {
-    position: fixed;
-    top: 0;
-    right: 200%;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    background: #fff;
-    padding-top: 20%;
-    transition: right 0s 0.5s, opacity 0.5s;
+      position: fixed;
+      top: 0;
+      right: 200%;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      background: #fff;
+      padding-top: 20%;
+      transition: right 0s 0.5s, opacity 0.5s;
     }
-        /* trigger for animation - pulls down nav box */
+    /* trigger for animation - pulls down nav box */
     button:focus + nav,
     button:focus-within + nav {
-    right: 0;
-    opacity: 1;
-    transition: right 0s, opacity 0.5s;
+      right: 0;
+      opacity: 1;
+      transition: right 0s, opacity 0.5s;
     }
     nav ul {
-    display: block;
-    text-align: center;
-    position: relative;
-    top: -50vh;
-    transition: top 0.5s;
+      display: block;
+      text-align: center;
+      position: relative;
+      top: -50vh;
+      transition: top 0.5s;
     }
     /* trigger for animation - makes the links in motion */
     button:focus + nav ul,
     button:focus-within + nav ul {
-    top: 0;
+      top: 0;
     }
     /* styling for links and SVGs in the mobile menu */
     nav a:any-link:not(.button) {
-    display: block;
-    padding: 1.5rem;
-    color: var(--green);
+      display: block;
+      padding: 1.5rem;
+      color: var(--green);
     }
     nav a svg {
-    fill: var(--green);
+      fill: var(--green);
     }
     nav a:hover,
     nav a svg:hover {
-    color: var(--tan);
-    fill: var(--tan);
+      color: var(--tan);
+      fill: var(--tan);
     }
     /* keep spacing even between link items */
     nav .button {
-    margin-top: 1.5rem;
+      margin-top: 1.5rem;
     }
     /* sets up the close icon - clicking anywhere not on a link will close the menu */
     nav ul::after {
-    content: "\2716";
-    color: var(--green);
-    display: block;
-    position: absolute;
-    top: 0.125rem;
-    right: 0.5rem;
-    font-size: 3rem;
-    line-height: 1;
+      content: "\2716";
+      color: var(--green);
+      display: block;
+      position: absolute;
+      top: 0.125rem;
+      right: 0.5rem;
+      font-size: 3rem;
+      line-height: 1;
     }
-}
+  }
 }
 @layer featured {
-    .section-featured {
+  .section-featured {
     background-image: url(../img/fem-feature-bottom.png),
-    url(../img/fem-feature-bkgd.png);
+      url(../img/fem-feature-bkgd.png);
     background-repeat: repeat-x, repeat;
     background-position: bottom center, center center;
     padding: 2rem 0 6rem 0;
-}
-.project {
-    background-image: 
-    url(../img/fem-feature-bkgd.png);
+  }
+  .project {
+    background-image: url(../img/fem-feature-bkgd.png);
     background-repeat: repeat;
     background-position: center center;
     padding: 6rem 0;
-}
-.section-featured h3 {
+  }
+  .section-featured h3 {
     margin: 3rem 0 0 0;
     padding: 1rem 1rem 0 1rem;
     color: var(--white);
     font-size: var(--h4);
     background-color: var(--black);
-}
-.blackbox {
+  }
+  .blackbox {
     padding: 0rem 1rem 1rem 1rem;
     color: white;
     background-color: var(--black);
     border-radius: 0;
-}
-.section-featured article {
+  }
+  .section-featured article {
     display: grid;
     grid-template-rows: auto;
-}
+  }
 
-.section-featured img {
+  .section-featured img {
     grid-row: 1/2;
     grid-column: 1/2;
     display: block;
     margin-top: 1rem;
-}
-    .section-featured ul {
+  }
+  .section-featured ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -377,218 +378,217 @@ nav .button:hover {
     font-size: var(--small);
     grid-row: 2/3;
     margin-top: -1.75rem;
-}
+  }
 
-.section-featured li {
+  .section-featured li {
     background-color: var(--white);
     padding: 0.5rem;
     border: 2px solid var(--red);
-}
-.youtube {
+  }
+  .youtube {
     aspect-ratio: 16 / 9;
     width: 100%;
     margin-bottom: 3rem;
-}
+  }
 
-@media (max-width: 475px) {
+  @media (max-width: 475px) {
     .section-featured h2 {
-    font-size: var(--h4);
+      font-size: var(--h4);
     }
-}
-@media (max-width: 400px) {
+  }
+  @media (max-width: 400px) {
     .section-featured h2 {
-    font-size: var(--h5);
+      font-size: var(--h5);
     }
     .section-featured h3 {
-    font-size: var(--h5);
+      font-size: var(--h5);
     }
     .section-featured ul {
-    background-color: var(--white);
-    padding: 0.5rem;
-    border: 2px solid var(--red);
-}
+      background-color: var(--white);
+      padding: 0.5rem;
+      border: 2px solid var(--red);
+    }
     .section-featured li {
-    background-color: transparent;
-    padding: 0;
-    border: none;
-}
-}
+      background-color: transparent;
+      padding: 0;
+      border: none;
+    }
+  }
 }
 @layer projects {
-    .section-projects {
+  .section-projects {
     background-color: var(--black);
     padding: 2rem 0 4rem 0;
     color: var(--white);
-}
-figure {
+  }
+  figure {
     display: grid;
     grid-template-rows: 1fr 100px;
-}
-figure img {
+  }
+  figure img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     padding-top: 1rem;
-}
-figure a {
+  }
+  figure a {
     color: var(--white);
     text-decoration: none;
     grid-row: 1/3;
     grid-column: 1/2;
-}
-figure a:hover {
+  }
+  figure a:hover {
     color: var(--green);
-}
-figcaption {
+  }
+  figcaption {
     background-color: var(--black);
     opacity: 0.8;
     text-align: center;
     grid-row: 2/3;
     grid-column: 1/2;
-}
-figcaption h3 {
+  }
+  figcaption h3 {
     margin-bottom: 0;
     font-size: var(--h5);
-}
-figcaption ul {
+  }
+  figcaption ul {
     list-style-type: none;
     padding: 0;
     margin: 0 0 2rem 0;
     font-family: var(--mono);
     text-transform: uppercase;
     font-size: var(--small);
-}
-figcaption li {
+  }
+  figcaption li {
     display: inline-block;
-}
-.topgrid {
+  }
+  .topgrid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-}
-.topgrid figure:first-child {
+  }
+  .topgrid figure:first-child {
     grid-row: span 2;
-}
-.bottomgrid {
+  }
+  .bottomgrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     margin: 2rem 0;
-}
-.project figure {
+  }
+  .project figure {
     display: block;
-}
-.project figcaption {
+  }
+  .project figcaption {
     background-color: transparent;
     color: var(--black);
     text-align: left;
-}
-figure.featured-screenshots {
+  }
+  figure.featured-screenshots {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 2rem;
-}
-.section-featured .featured-screenshots img {
+  }
+  .section-featured .featured-screenshots img {
     grid-column: revert;
     grid-row: revert;
-}
-.featured-screenshots figcaption {
+  }
+  .featured-screenshots figcaption {
     grid-column: 1/4;
     grid-row: 2/3;
-}
-.featured-screenshots figcaption p {
+  }
+  .featured-screenshots figcaption p {
     columns: 2;
     margin-bottom: 5rem;
-}
-.feature-image {
+  }
+  .feature-image {
     display: block;
     margin: 5rem 0;
-}
-figure.figure-portifolio {
+  }
+  figure.figure-portifolio {
     margin: 5rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: center;
     gap: 2rem;
-}
-.figure-portifolio img {
+  }
+  .figure-portifolio img {
     margin-top: 0;
     grid-column: 2/3;
     grid-row: 1/2;
-}
-.figure-portifolio figcaption {
+  }
+  .figure-portifolio figcaption {
     grid-column: 1/2;
     grid-row: 1/2;
-}
+  }
 
-@media (max-width: 992px) {
+  @media (max-width: 992px) {
     .topgrid {
-    display: block;
+      display: block;
     }
     .topgrid figure {
-            margin-bottom: 4rem;
+      margin-bottom: 4rem;
     }
     .bottomgrid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 6rem 2rem;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      gap: 6rem 2rem;
     }
     .bottomgrid > * {
-    flex-basis: 30%;
+      flex-basis: 30%;
     }
     .bottomgrid img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
-}
-@media (max-width: 667px) {
+  }
+  @media (max-width: 667px) {
     .bottomgrid {
-    gap: 2rem;
+      gap: 2rem;
     }
     .bottomgrid a {
-    flex-basis: 80%;
+      flex-basis: 80%;
     }
     .topgrid figure {
-    margin-bottom: 2rem;
+      margin-bottom: 2rem;
     }
     .section-projects h2 {
-    font-size: var(--h5);
+      font-size: var(--h5);
     }
     figcaption h3 {
-    font-size: var(--base-size);
+      font-size: var(--base-size);
     }
-}
+  }
 }
 @layer contact {
-.section-contact {
+  .section-contact {
     text-align: center;
     padding: 2rem 0;
-    background: var(--black)
-    url(../img/fem-aurora.jpg) center center;
+    background-color: var(--black);
     color: var(--white);
-}
-.section-contact p:last-child {
+  }
+  .section-contact p:last-child {
     margin-top: 3rem;
     margin-bottom: 4rem;
-}
+  }
 }
 @layer footer {
-footer {
+  footer {
     text-align: center;
-    padding:6rem 0;
+    padding: 6rem 0;
     background: var(--black) url(../img/fem-stars.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     color: var(--white);
-}
+  }
 
-footer ul {
+  footer ul {
     list-style-type: none;
     padding: 0;
     margin: 2rem 0;
@@ -597,22 +597,22 @@ footer ul {
     justify-content: center;
     gap: 3rem;
     font-size: 3rem;
-}
-footer svg {
+  }
+  footer svg {
     width: 40px;
     fill: var(--white);
-}
-footer a:hover svg {
+  }
+  footer a:hover svg {
     fill: var(--green);
-}
-.project + footer {
+  }
+  .project + footer {
     padding-top: 0;
-}
-.bottom-trim {
+  }
+  .bottom-trim {
     background-image: url(../img/fem-featured-bottom.png);
     background-repeat: repeat-x;
     background-position: top center;
     height: 16px;
     padding-bottom: 4rem;
-}
+  }
 }
