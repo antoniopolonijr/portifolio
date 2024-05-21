@@ -150,7 +150,7 @@
 }
 @layer intro {
   .intro {
-    padding: 4rem 0 6rem 0;
+    padding: 4rem 0 9rem 0;
     background-image: url(../img/fem-featured-top.png),
       url(../img/fem-comet.jpg);
     background-repeat: repeat-x, repeat;
@@ -162,6 +162,7 @@
   }
   .intro h2 {
     text-transform: uppercase;
+    font-size: var(--h4);
   }
   .name {
     font-weight: 700;
@@ -240,12 +241,12 @@
     header h1 {
       flex-basis: 100%;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   @media (max-width: 640px) {
     header {
-      justify-content: space-between;
+      justify-content: center;
     }
     header h1 {
       flex-basis: auto;
