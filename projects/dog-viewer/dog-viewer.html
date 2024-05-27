@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Antonio Poloni's Portfolio</title>
+    <title>Dog Viewer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/dog-viewer.css" rel="stylesheet" />
   </head>
   <body>
     <section class="intro">
@@ -28,16 +28,14 @@
                 d="M48.7 125.8l53.2 31.9c7.8 4.7 17.8 2 22.2-5.9L201.6 12.1c3-5.4-.9-12.1-7.1-12.1c-1.6 0-3.2 .5-4.6 1.4L47.9 98.8c-9.6 6.6-9.2 20.9 .8 26.9zM16 171.7V295.3c0 8 10.4 11 14.7 4.4l60-92c5-7.6 2.6-17.8-5.2-22.5L40.2 158C29.6 151.6 16 159.3 16 171.7zM310.4 12.1l77.6 139.6c4.4 7.9 14.5 10.6 22.2 5.9l53.2-31.9c10-6 10.4-20.3 .8-26.9L322.1 1.4c-1.4-.9-3-1.4-4.6-1.4c-6.2 0-10.1 6.7-7.1 12.1zM496 171.7c0-12.4-13.6-20.1-24.2-13.7l-45.3 27.2c-7.8 4.7-10.1 14.9-5.2 22.5l60 92c4.3 6.7 14.7 3.6 14.7-4.4V171.7zm-49.3 246L286.1 436.6c-8.1 .9-14.1 7.8-14.1 15.9v52.8c0 3.7 3 6.8 6.8 6.8c.8 0 1.6-.1 2.4-.4l172.7-64c6.1-2.2 10.1-8 10.1-14.5c0-9.3-8.1-16.5-17.3-15.4zM233.2 512c3.7 0 6.8-3 6.8-6.8V452.6c0-8.1-6.1-14.9-14.1-15.9l-160.6-19c-9.2-1.1-17.3 6.1-17.3 15.4c0 6.5 4 12.3 10.1 14.5l172.7 64c.8 .3 1.6 .4 2.4 .4zM41.7 382.9l170.9 20.2c7.8 .9 13.4-7.5 9.5-14.3l-85.7-150c-5.9-10.4-20.7-10.8-27.3-.8L30.2 358.2c-6.5 9.9-.3 23.3 11.5 24.7zm439.6-24.8L402.9 238.1c-6.5-10-21.4-9.6-27.3 .8L290.2 388.5c-3.9 6.8 1.6 15.2 9.5 14.3l170.1-20c11.8-1.4 18-14.7 11.5-24.6zm-216.9 11l78.4-137.2c6.1-10.7-1.6-23.9-13.9-23.9H183.1c-12.3 0-20 13.3-13.9 23.9l78.4 137.2c3.7 6.4 13 6.4 16.7 0zM174.4 176H337.6c12.2 0 19.9-13.1 14-23.8l-80-144c-2.8-5.1-8.2-8.2-14-8.2h-3.2c-5.8 0-11.2 3.2-14 8.2l-80 144c-5.9 10.7 1.8 23.8 14 23.8z"
               />
             </svg>
-            <a href="index.html" aria-label="Click for home.">
+            <a href="../../index.html" aria-label="Click for home.">
               Antonio Poloni
             </a>
           </h1>
           <button type="button" tabindex="-1" hidden></button>
           <nav>
             <ul class="menu">
-              <li><a href="#featured">BootCamp</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#dog-viewer">Dog Viewer</a></li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/antonio-br%C3%A1s-poloni-j%C3%BAnior-27148390/"
@@ -83,144 +81,22 @@
             </ul>
           </nav>
         </header>
-        <p>Hi, my name is <span class="name">Antonio Poloni</span>.</p>
-        <h2>I'm venturing into the world of programming.</h2>
-        <p>
-          I'm making a career switch from Mechanical Engineering to Web
-          Developer.
-        </p>
-        <p>
-          Currently, I'm learning web development at
-          <a href="https://frontendmasters.com/" target="_blank"
-            >Frontend Masters</a
-          >
-          and completing the
-          <a href="https://frontendmasters.com/bootcamp/" target="_blank"
-            >Frontend Masters Bootcamp</a
-          >.
-        </p>
       </div>
     </section>
-    <section class="section-featured" id="featured">
+    <section class="section-dog-viewer" id="dog-viewer">
       <div class="container">
-        <h2>Featured Project</h2>
-        <article>
-          <h3>Frontend Masters BootCamp</h3>
+        <h2>Dog Viewer</h2>
+        <p>Select a Breed</p>
+        <select id="breed"></select>
+        <div class="dog-img">
           <img
-            src="img/app-bootcamp-logo.jpg"
-            alt="Frontend Masters Bootcamp course image."
+            id="main"
+            class="main-image"
+            src=""
+            alt="dog image from the selected breed"
           />
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-          <div class="blackbox">
-            <p>
-              The Frontend Masters Bootcamp is a complete crash course that
-              covers everything you need to get started with HTML, CSS, and
-              JavaScript. By completing the coursework and practicing a lot,
-              you'll be ready to dive into the world of web development! I had
-              access to everything I needed to start building websites and
-              learned HTML, CSS, and JavaScript through project-based learning.
-              It was an incredible experience that provided me with a solid
-              foundation for my web development career.
-            </p>
-            <p><a href="#projects" class="button">See projects!</a></p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="section-projects" id="projects">
-      <div class="container">
-        <h2>Projects I am proud of</h2>
-        <div class="topgrid">
-          <figure>
-            <a href="projects/mole-game/mole.html" target="_blank"
-              ><img
-                src="projects/mole-game/aap-mole-game-Screenshot.png"
-                alt="Project Mole Game screenshot."
-            /></a>
-            <figcaption>
-              <a href="projects/mole-game/mole.html" target="_blank">
-                <h3>Feed A Star Mole</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a href="projects/calculator/calculator.html" target="_blank"
-              ><img
-                src="img/app-calculator-spec.png"
-                alt=" Project Calculator screenshot."
-            /></a>
-            <figcaption>
-              <a href="projects/calculator/calculator.html" target="_blank">
-                <h3>Calculator</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a href="projects/forms/forms-end.html" target="_blank"
-              ><img
-                src="img/aap-HTML Forms-Screenshot.png"
-                alt="Project Forms screenshot."
-            /></a>
-            <figcaption>
-              <a href="projects/forms/forms-end.html" target="_blank">
-                <h3>Forms</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
+          <span id="loader" class="loading-dog show">🐶</span>
         </div>
-        <div class="bottomgrid">
-          <a href="projects/blog/blog.html" target="_blank"
-            ><img src="img/fem-blog.png" alt="Project Alien Blog screenshot."
-          /></a>
-          <a href="projects/blog/blog.html" target="_blank"
-            ><img src="img/app-Introduction to CSS.webp" alt="CSS logo image."
-          /></a>
-          <a href="projects/calculator/calculator.html" target="_blank"
-            ><img
-              src="img/app-Introduction to JavaScript.webp"
-              alt="JavaScript logo image."
-          /></a>
-          <a href="projects/calculator/calculator.html" target="_blank"
-            ><img
-              src="img/app-Calculator Project.webp"
-              alt="Calculator Project course logo."
-          /></a>
-          <a href="projects/dog-viewer/dog-viewer.html" target="_blank"
-            ><img
-              src="img/aap-dog-viewer-Screenshot.png"
-              alt="Project Dog Viewer Screenshot."
-          /></a>
-        </div>
-      </div>
-    </section>
-    <section class="section-contact" id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>
-          I’m always up for challenges. Let’s collaborate and create something
-          interesting.
-        </p>
-        <p>
-          <a href="mailto:antoniopolonijr@gmail.com" class="button">Email me</a>
-        </p>
       </div>
     </section>
     <footer>
@@ -284,6 +160,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/popmotion@8.5.0/dist/popmotion.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/dog-viewer.js"></script>
   </body>
 </html>
