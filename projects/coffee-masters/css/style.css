@@ -115,7 +115,7 @@
     padding: 3%;
   }
   .name-box {
-    margin-bottom: 5%;
+    margin-bottom: 20px;
   }
 
   .box-title {
@@ -193,7 +193,7 @@
   }
 
   .short-input {
-    width: 40%;
+    width: 160px;
   }
 
   /* TOTAL */
@@ -232,5 +232,21 @@
     text-align: center;
     margin: 0 70px 30px 70px;
     color: #3d4630;
+  }
+  @media (max-width: 640px) {
+    .order-payment {
+      display: block;
+      padding: 20px 20px;
+      margin-bottom: 20px;
+    }
+    .order {
+      margin-bottom: 20px;
+    }
+    .total-price {
+      flex-basis: 25%;
+    }
+    .total-title {
+      flex-basis: 25%;
+    }
   }
 }

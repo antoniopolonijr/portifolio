@@ -12,15 +12,15 @@ function buttonClick(value) {
   rerender();
 }
 
-function handleNumber(value) {
+function handleNumber(number) {
   if (buffer === "0") {
-    buffer = value;
+    buffer = number;
   } else {
-    buffer += value;
+    buffer += number;
   }
 }
 
-function handleMath(value) {
+function handleMath(symbol) {
   if (buffer === "0") {
     // do nothing
     return;
@@ -33,7 +33,7 @@ function handleMath(value) {
     flushOperation(intBuffer);
   }
 
-  previousOperator = value;
+  previousOperator = symbol;
 
   buffer = "0";
 }
@@ -50,8 +50,8 @@ function flushOperation(intBuffer) {
   }
 }
 
-function handleSymbol(value) {
-  switch (value) {
+function handleSymbol(symbol) {
+  switch (symbol) {
     case "C":
       buffer = "0";
       runningTotal = 0;
@@ -77,7 +77,7 @@ function handleSymbol(value) {
     case "-":
     case "×":
     case "÷":
-      handleMath(value);
+      handleMath(symbol);
       break;
   }
 }
