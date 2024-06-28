@@ -10,10 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
-    <section class="intro">
+    <section id="welcome-section" class="intro">
       <div class="container">
         <header>
           <h1>
@@ -29,14 +29,14 @@
               />
             </svg>
             <a href="index.html" aria-label="Click for home.">
-              <p>Antonio Poloni</p>
+              Antonio Poloni
             </a>
           </h1>
           <button type="button" tabindex="-1" hidden></button>
-          <nav>
+          <nav id="navbar">
             <ul class="menu">
-              <li><a href="#projects-frontendMasters">Frontend Masters</a></li>
-              <li><a href="#projects-freeCodeCamp">freeCodeCamp</a></li>
+              <li><a href="#featured">BootCamp</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
                 <a
@@ -60,6 +60,7 @@
                   href="https://github.com/antoniopolonijr"
                   target="_blank"
                   aria-label="Github"
+                  id="profile-link"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,26 +99,14 @@
           <a href="https://frontendmasters.com/" target="_blank"
             >Frontend Masters</a
           >
-          and
-          <a href="https://www.freecodecamp.org/" target="_blank"
-            >freeCodeCamp</a
-          >
           . I recently completed the
           <a href="https://frontendmasters.com/bootcamp/" target="_blank"
             >Frontend Masters Bootcamp</a
           >
-          and the
-          <a
-            href="https://www.freecodecamp.org/certification/antoniopolonijr/responsive-web-design"
-            target="_blank"
-            >Responsive Web Design Certification</a
-          >
-          , two significant steps towards my goal of becoming a web developer.
+          , a significant step towards my goal of becoming a web developer.
         </p>
       </div>
     </section>
-    <!-- FUTURE FEATURED PROJECTS !
-     
     <section class="section-featured" id="featured">
       <div class="container">
         <h2>Featured Project</h2>
@@ -153,56 +142,19 @@
           </div>
         </article>
       </div>
-    </section> -->
-    <section class="section-projects" id="projects-frontendMasters">
+    </section>
+    <section class="section-projects" id="projects">
       <div class="container">
-        <h2>Projects at Frontend Masters</h2>
-        <div class="blackbox">
-          <p>
-            I completed the Frontend Masters Bootcamp and Beginner Learning Path
-            to Web Development, gaining essential skills in HTML, CSS, and
-            JavaScript. Through project-based learning, I built and styled web
-            pages, developed interactive features, and gained a solid foundation
-            in web development, preparing me for a professional career in the
-            field.
-          </p>
-        </div>
+        <h2>Projects</h2>
         <div class="topgrid">
           <figure>
-            <a
-              href="projects/Frontend Masters/mole-game/mole.html"
-              target="_blank"
+            <a href="projects/word-masters/word-masters.html" target="_blank"
               ><img
-                src="projects/Frontend Masters/mole-game/aap-mole-game-Screenshot.png"
-                alt="Feed a Star Mole game project screenshot."
+                src="projects/word-masters/word-masters-screenshot.png"
+                alt="Word Masters Project screenshot."
             /></a>
             <figcaption>
-              <a
-                href="projects/Frontend Masters/mole-game/mole.html"
-                target="_blank"
-              >
-                <h3>Feed a Star Mole (DESKTOP)</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/Frontend Masters/word-masters/word-masters.html"
-              target="_blank"
-              ><img
-                src="./projects/Frontend Masters/word-masters/word-masters-screenshot.png"
-                alt="Word Masters Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/Frontend Masters/word-masters/word-masters.html"
-                target="_blank"
-              >
+              <a href="projects/word-masters/word-masters.html" target="_blank">
                 <h3>Word Masters (Desktop)</h3>
                 <ul>
                   <li>HTML</li>
@@ -213,18 +165,13 @@
             </figcaption>
           </figure>
           <figure>
-            <a
-              href="projects/Frontend Masters/calculator/calculator.html"
-              target="_blank"
+            <a href="projects/calculator/calculator.html" target="_blank"
               ><img
-                src="projects/Frontend Masters/calculator/app-calculator-spec.png"
-                alt="Project Coffee Masters menu screenshot."
+                src="img/app-calculator-spec.png"
+                alt=" Project Calculator screenshot."
             /></a>
             <figcaption>
-              <a
-                href="projects/Frontend Masters/calculator/calculator.html"
-                target="_blank"
-              >
+              <a href="projects/calculator/calculator.html" target="_blank">
                 <h3>Calculator</h3>
                 <ul>
                   <li>HTML</li>
@@ -234,159 +181,47 @@
               </a>
             </figcaption>
           </figure>
+          <figure>
+            <a href="projects/coffee-masters/index.html" target="_blank"
+              ><img
+                src="projects/coffee-masters/Coffee-Masters-Screenshot.png"
+                alt="Project Coffee Masters menu screenshot."
+            /></a>
+            <figcaption>
+              <a href="projects/coffee-masters/index.html" target="_blank">
+                <h3>Coffee Masters Menu</h3>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </a>
+            </figcaption>
+          </figure>
         </div>
         <div class="bottomgrid">
-          <a href="projects/Frontend Masters/blog/blog.html" target="_blank"
+          <a href="projects/blog/blog.html" target="_blank"
             ><img
-              src="projects/Frontend Masters/blog/frontendMasters-blog-screenshot.png"
+              src="img/fem-blog.png"
               alt="Project Alien Blog screenshot."
+              class="project-tile"
           /></a>
-          <a
-            href="projects/Frontend Masters/coffee-masters/index.html"
-            target="_blank"
-            ><img
-              src="projects/Frontend Masters/coffee-masters/Coffee-Masters-Screenshot.png"
-              alt="Coffe Masters Project Screenshot."
+          <a href="projects/blog/blog.html" target="_blank"
+            ><img src="img/app-Introduction to CSS.webp" alt="CSS logo image."
           /></a>
-          <a
-            href="projects/Frontend Masters/forms/forms-end.html"
-            target="_blank"
+          <a href="projects/forms/forms-end.html" target="_blank"
             ><img
-              src="projects/Frontend Masters/forms/aap-HTML Forms-Screenshot.png"
-              alt="Project Forms Screenshot."
+              src="projects/forms/aap-HTML Forms-Screenshot.png"
+              alt="Project Forms screenshot."
           /></a>
-          <a
-            href="projects/Frontend Masters/calculator/calculator.html"
-            target="_blank"
+          <a href="projects/calculator/calculator.html" target="_blank"
             ><img
-              src="projects/Frontend Masters/calculator/app-Calculator Project.webp"
+              src="img/app-Calculator Project.webp"
               alt="Calculator Project course logo."
           /></a>
-          <a
-            href="projects/Frontend Masters/dog-viewer/dog-viewer.html"
-            target="_blank"
+          <a href="projects/dog-viewer/dog-viewer.html" target="_blank"
             ><img
-              src="projects/Frontend Masters/dog-viewer/frontendMasters-dogViewer-Screenshot.png"
+              src="img/aap-dog-viewer-Screenshot.png"
               alt="Project Dog Viewer Screenshot."
-          /></a>
-        </div>
-      </div>
-    </section>
-    <section class="section-projects" id="projects-freeCodeCamp">
-      <div class="container">
-        <h2>Projects at freeCodeCamp</h2>
-        <div class="blackbox">
-          <p>
-            Certified in Responsive Web Design, where I mastered the essentials
-            of HTML for structuring content and CSS for creating visually
-            appealing designs. Through hands-on projects, I built a cat photo
-            app to grasp HTML and CSS basics, explored CSS variables by crafting
-            a penguin, and implemented accessibility best practices with a quiz
-            site. Additionally, I developed responsive webpages using Flexbox
-            for a photo gallery and CSS Grid for a magazine article layout,
-            ensuring optimal viewing across various screen sizes.
-          </p>
-        </div>
-        <div class="topgrid">
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
-              target="_blank"
-              ><img
-                src="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/freeCodeCamp-responsiveWebDesign-magazine-screenshot.png"
-                alt="Magazine Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
-                target="_blank"
-              >
-                <h3>Magazine</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
-              target="_blank"
-              ><img
-                src="./projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage-screenshot.png"
-                alt="Technical Documentation Page Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
-                target="_blank"
-              >
-                <h3>Technical Documentation</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
-              target="_blank"
-              ><img
-                src="./projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/freeCodeCamp-responsiveWebDesign-nutritionLabel-screenshot.png"
-                alt="Nutrition Label Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
-                target="_blank"
-              >
-                <h3>Nutrition Label</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="bottomgrid">
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/19 - Penguin/freeCodeCamp-responsiveWebDesign-penguin/index.html"
-            target="_blank"
-            ><img
-              src="projects/freeCodeCamp - Responsive Web Design/19 - Penguin/freeCodeCamp-responsiveWebDesign-penguin/freeCodeCamp-penguin-screenshot.png"
-              alt="Penguin Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/freeCodeCamp-responsiveWebDesign-citySkyline-day-screenshot.png"
-              alt="City Skyline (Day) Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/freeCodeCamp-responsiveWebDesign-citySkyline-night-screenshot.png"
-              alt="City Skyline (Night) Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/07 - Photo Gallery/freeCodeCamp-responsiveWebDesign-photoGallery/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/07 - Photo Gallery/freeCodeCamp-responsiveWebDesign-photoGallery/freeCodeCamp-responsiveWebDesign-photoGallery-screeshot.png"
-              alt="Photo Gallery Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/09 - Accessibility Quiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/09 - Accessibility Quiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz-screenshot.png"
-              alt="Accessibility Quiz Project Screenshot."
           /></a>
         </div>
       </div>

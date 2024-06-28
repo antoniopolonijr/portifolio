@@ -1,0 +1,252 @@
+@layer base {
+  :root {
+    /* colors */
+    --black: #000501;
+    --tan: #b6b57b;
+    --green: #31b28a;
+    --lightgreen: #8cdfc5;
+    --red: #ff4404;
+    --white: #ffffff;
+
+    /* font families */
+    --main: "Open Sans", sans-serif;
+    --heading: "Open Sans", sans-serif;
+    --mono: "Open Sans", sans-serif;
+
+    /* type scale */
+    --base-size: 16px;
+    --scale: 1.1;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+    --small: calc(var(--base-size) / var(--scale));
+  }
+
+  /* border box model: https://css-tricks.com/box-sizing/ */
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: var(--main);
+    font-size: var(--base-size);
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    color: #3d4630;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading);
+  }
+  h1 {
+    font-size: var(--h1);
+  }
+  h2 {
+    font-size: var(--h2);
+  }
+  h3 {
+    font-size: var(--h3);
+  }
+  h4 {
+    font-size: var(--h4);
+  }
+  h5 {
+    font-size: var(--h5);
+  }
+  h6 {
+    font-size: var(--h6);
+  }
+  .mono {
+    font-family: var(--mono);
+  }
+}
+@layer header {
+  .section-header {
+    background-color: #43281c;
+    color: #fbf2c0;
+    margin-bottom: 5%;
+  }
+  .brand {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .section-header img {
+    height: 30px;
+  }
+  .section-header h1 {
+    font-size: var(--h6);
+    font-weight: normal;
+  }
+}
+@layer main {
+  /* Boxes */
+
+  .order-payment {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-bottom: 10%;
+  }
+  .order,
+  .payment {
+    flex-basis: 45%;
+  }
+  .box {
+    background-color: #eee1d5;
+    border-radius: 2%;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+    padding: 3%;
+  }
+  .name-box {
+    margin-bottom: 20px;
+  }
+
+  .box-title {
+    font-size: var(--h6);
+    color: #885a2d;
+    font-weight: normal;
+    margin: 1% auto;
+  }
+
+  /* Itens */
+  .items-table {
+    width: 100%;
+  }
+  .row-items {
+    border-bottom: 2px solid #ddb892;
+    display: flex;
+    align-items: flex-start;
+    padding: 3%;
+  }
+
+  .row-items:last-child {
+    border-bottom: none;
+  }
+  .item-quantity {
+    flex-basis: 10%;
+  }
+  .item-title-options {
+    flex-basis: 70%;
+  }
+  .item-price {
+    font-weight: bold;
+    text-align: right;
+    flex-basis: 20%;
+  }
+  .item-title {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1%;
+  }
+  .item-option {
+    color: #885a2d;
+    margin-bottom: 1%;
+  }
+  .item-options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* Payment */
+
+  fieldset {
+    border: 2px #885a2d solid;
+    border-radius: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 3% auto;
+  }
+
+  legend {
+    color: #885a2d;
+    padding: 0 5px;
+    font-size: 14px;
+    font-family: var(--main);
+  }
+
+  .user-input {
+    background-color: #eee1d5;
+    border: none;
+    width: 100%;
+    font-size: var(--base-size);
+    text-indent: 5px;
+    color: #3d4630;
+    padding: 0;
+  }
+
+  .short-input {
+    width: 160px;
+  }
+
+  /* TOTAL */
+  .section-total {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .total-table {
+    width: 100%;
+  }
+  .total-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .total-price {
+    text-align: right;
+    flex-basis: 15%;
+  }
+  .total-title {
+    flex-basis: 15%;
+  }
+  .final-totals {
+    font-weight: bold;
+    padding-top: 5px;
+  }
+
+  .checkout {
+    background-color: #deb993;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 70px 30px 70px;
+    color: #3d4630;
+  }
+  @media (max-width: 640px) {
+    .order-payment {
+      display: block;
+      padding: 20px 20px;
+      margin-bottom: 20px;
+    }
+    .order {
+      margin-bottom: 20px;
+    }
+    .total-price {
+      flex-basis: 25%;
+    }
+    .total-title {
+      flex-basis: 25%;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Masters</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="section-header">
+      <h1 class="brand">
+        <img
+          class="logo"
+          src="./img/coffee_masters_logo.png"
+          alt="Coffee shop logo"
+        />
+        Coffe Masters
+      </h1>
+    </section>
+    <section class="section-main">
+      <div class="order-payment">
+        <section class="order">
+          <div class="items-box box">
+            <table class="items-table">
+              <thead>
+                <tr>
+                  <td><h2 class="box-title">ITEMS</h2></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-items">
+                  <td class="item-quantity">1x</td>
+                  <td class="item-title-options">
+                    <p class="item-title">Cappuccino</p>
+                    <ul class="item-options-list">
+                      <li class="item-option">Lite foam</li>
+                    </ul>
+                  </td>
+                  <td class="item-price">$3.35</td>
+                </tr>
+                <tr class="row-items">
+                  <td class="item-quantity">1x</td>
+                  <td class="item-title-options">
+                    <p class="item-title">Cappuccino</p>
+                    <ul class="item-options-list">
+                      <li class="item-option">Lite milk</li>
+                      <li class="item-option">Double expresso</li>
+                    </ul>
+                  </td>
+                  <td class="item-price">$3.85</td>
+                </tr>
+                <tr class="row-items">
+                  <td class="item-quantity">1x</td>
+                  <td class="item-title-options">
+                    <p class="item-title">Croissant</p>
+                    <ul class="item-options-list">
+                      <li class="item-option">Butter</li>
+                    </ul>
+                  </td>
+                  <td class="item-price">$2.45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="payment">
+          <div class="name-box box">
+            <h2 class="box-title">NAME</h2>
+            <form class="input-group">
+              <fieldset>
+                <legend>Name for order</legend>
+                <label class="user-input-label" for="name"></label>
+                <input type="text" class="user-input" id="name" />
+              </fieldset>
+            </form>
+          </div>
+          <div class="payment-box box">
+            <h2 class="box-title">PAYMENT</h2>
+            <form class="input-group">
+              <fieldset>
+                <legend>Card number</legend>
+                <label class="user-input-label" for="card-number"></label>
+                <input type="text" class="user-input" id="card-number" />
+              </fieldset>
+            </form>
+            <form class="input-group short-input">
+              <fieldset>
+                <legend>CCV number</legend>
+                <label class="user-input-label" for="ccv-number"></label>
+                <input type="text" class="user-input" id="ccv-number" />
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+      <section class="section-total">
+        <table class="total-table">
+          <tbody class="total-body">
+            <tr class="total-row">
+              <td class="total-title">Subtotal:</td>
+              <td class="total-price">$9.65</td>
+            </tr>
+            <tr class="total-row">
+              <td class="total-title">Tax:</td>
+              <td class="total-price">$0.82</td>
+            </tr>
+            <tr class="total-row final-totals">
+              <td class="total-title final-totals">Total:</td>
+              <td class="total-price final-totals">$10.47</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="checkout" type="button">Place order</button>
+      </section>
+    </section>
+  </body>
+</html>
