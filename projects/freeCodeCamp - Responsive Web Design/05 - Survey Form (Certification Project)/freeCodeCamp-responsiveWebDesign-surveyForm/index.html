@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      Thank you for dedicating your time to help us improve the platform.
+    </p>
+    <form id="survey-form">
+      <label id="name-label" for="name"
+        >Name:
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          placeholder="Enter your name"
+      /></label>
+      <label id="email-label" for="email"
+        >Email:
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="Enter your email"
+      /></label>
+      <label id="number-label" for="number"
+        >Age:
+        <input
+          id="number"
+          name="number"
+          type="number"
+          min="13"
+          max="120"
+          placeholder="Enter your age"
+      /></label>
+      <label for="dropdown"
+        >How did you hear about us?
+        <select id="dropdown" name="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Instagram</option>
+          <option value="2">YouTube</option>
+          <option value="3">Facebook</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+      <p class="p-form">Would you suggest the plataform to a friend?</p>
+      <label for="Absolutely"
+        ><input
+          id="Absolutely"
+          value="Absolutely"
+          type="radio"
+          name="user-recommend"
+          class="inline"
+          checked
+        />
+        Absolutely</label
+      >
+      <label for="Possibly"
+        ><input
+          id="Possibly"
+          value="Possibly"
+          type="radio"
+          name="user-recommend"
+          class="inline"
+        />
+        Possibly</label
+      >
+      <label for="Uncertain"
+        ><input
+          id="Uncertain"
+          value="Uncertain"
+          type="radio"
+          name="user-recommend"
+          class="inline"
+        />
+        Uncertain</label
+      >
+      <p class="p-form">
+        What areas would you like to see improved? (Select all that apply)
+      </p>
+      <label for="layout">
+        <input
+          class="inline"
+          id="layout"
+          value="layout"
+          type="checkbox"
+          name="user-improve"
+        />
+        Layout
+      </label>
+      <label for="videos">
+        <input
+          class="inline"
+          id="videos"
+          value="videos"
+          type="checkbox"
+          name="user-improve"
+        />
+        Videos
+      </label>
+      <label for="forum">
+        <input
+          class="inline"
+          id="forum"
+          value="forum"
+          type="checkbox"
+          name="user-improve"
+        />
+        Forum
+      </label>
+      <label for="lives">
+        <input
+          class="inline"
+          id="lives"
+          value="lives"
+          type="checkbox"
+          name="user-improve"
+        />
+        Lives
+      </label>
+      <label class="textarea-label" for="user-comments"
+        >Any additional comments?
+        <textarea
+          id="user-comments"
+          name="user-comments"
+          rows="3"
+          cols="30"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </label>
+      <input type="submit" value="Submit" id="submit" name="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li><a class="nav-link" href="#HTML_Basics">HTML Basics</a></li>
+        <li><a class="nav-link" href="#Elements">Elements</a></li>
+        <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+        <li><a class="nav-link" href="#Forms">Forms</a></li>
+        <li><a class="nav-link" href="#Tables">Tables</a></li>
+        <li><a class="nav-link" href="#Semantic_HTML">Semantic HTML</a></li>
+        <li><a class="nav-link" href="#Media_Elements">Media Elements</a></li>
+        <li><a class="nav-link" href="#HTML5">HTML5</a></li>
+        <li><a class="nav-link" href="#Best_Practices">Best Practices</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            HTML (HyperText Markup Language) is the standard markup language for
+            creating web pages. It describes the structure of a webpage and is
+            used to organize and format content.
+          </p>
+          <p>
+            HTML consists of a series of elements which you use to enclose, or
+            wrap, different parts of the content to make it appear or act in a
+            certain way.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+          <ul>
+            <li>A basic understanding of how the Internet works.</li>
+            <li>Basic familiarity with using a web browser.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="HTML_Basics">
+        <header>HTML Basics</header>
+        <article>
+          <p>
+            HTML uses a set of elements to structure content. Each element has a
+            meaning and purpose.
+          </p>
+          <p>
+            A basic HTML document starts with a doctype declaration followed by
+            the html, head, and body elements.
+          </p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello, world!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Elements">
+        <header>Elements</header>
+        <article>
+          <p>
+            HTML elements are building blocks of HTML. An element is defined by
+            a start tag, some content, and an end tag.
+          </p>
+          <p>Example:</p>
+          <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Attributes">
+        <header>Attributes</header>
+        <article>
+          <p>
+            HTML attributes provide additional information about HTML elements.
+            Attributes are always included in the opening tag and usually come
+            in name/value pairs.
+          </p>
+          <p>Example:</p>
+          <pre><code>&lt;a href="https://www.example.com"&gt;This is a link&lt;/a&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Forms">
+        <header>Forms</header>
+        <article>
+          <p>
+            Forms are used to collect user input. Form elements include input
+            fields, checkboxes, radio buttons, submit buttons, etc.
+          </p>
+          <p>Example:</p>
+          <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Tables">
+        <header>Tables</header>
+        <article>
+          <p>
+            HTML tables are used to display tabular data. A table is defined
+            using the &lt;table&gt; element and contains rows and columns.
+          </p>
+          <p>Example:</p>
+          <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Semantic_HTML">
+        <header>Semantic HTML</header>
+        <article>
+          <p>
+            Semantic HTML elements clearly describe their meaning in a human-
+            and machine-readable way. Examples include &lt;article&gt;,
+            &lt;section&gt;, &lt;nav&gt;, &lt;header&gt;, and &lt;footer&gt;.
+          </p>
+          <p>Example:</p>
+          <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Article Title&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;p&gt;This is an article.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="Media_Elements">
+        <header>Media Elements</header>
+        <article>
+          <p>
+            HTML supports various media elements like images, audio, and video.
+            These elements allow you to embed multimedia into your web pages.
+          </p>
+          <p>Examples:</p>
+          <pre><code>&lt;img src="image.jpg" alt="Description of image"&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="HTML5">
+        <header>HTML5</header>
+        <article>
+          <p>
+            HTML5 is the latest version of HTML, which includes new elements,
+            attributes, and behaviors, as well as a larger set of technologies
+            that allow for more diverse and powerful web applications.
+          </p>
+          <p>New elements include:</p>
+          <ul>
+            <li>&lt;header&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;nav&gt;</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Best_Practices">
+        <header>Best Practices</header>
+        <article>
+          <p>
+            Writing clean, semantic HTML helps improve accessibility, search
+            engine optimization, and maintainability of your code.
+          </p>
+          <p>Some best practices include:</p>
+          <ul>
+            <li>Use semantic elements appropriately.</li>
+            <li>Keep your HTML well-structured and organized.</li>
+            <li>Validate your HTML to ensure it meets web standards.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                >MDN</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
