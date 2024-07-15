@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -17,26 +21,14 @@
       <div class="container">
         <header>
           <h1>
-            <svg
-              class="brand"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              aria-hidden="true"
-            >
-              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                d="M48.7 125.8l53.2 31.9c7.8 4.7 17.8 2 22.2-5.9L201.6 12.1c3-5.4-.9-12.1-7.1-12.1c-1.6 0-3.2 .5-4.6 1.4L47.9 98.8c-9.6 6.6-9.2 20.9 .8 26.9zM16 171.7V295.3c0 8 10.4 11 14.7 4.4l60-92c5-7.6 2.6-17.8-5.2-22.5L40.2 158C29.6 151.6 16 159.3 16 171.7zM310.4 12.1l77.6 139.6c4.4 7.9 14.5 10.6 22.2 5.9l53.2-31.9c10-6 10.4-20.3 .8-26.9L322.1 1.4c-1.4-.9-3-1.4-4.6-1.4c-6.2 0-10.1 6.7-7.1 12.1zM496 171.7c0-12.4-13.6-20.1-24.2-13.7l-45.3 27.2c-7.8 4.7-10.1 14.9-5.2 22.5l60 92c4.3 6.7 14.7 3.6 14.7-4.4V171.7zm-49.3 246L286.1 436.6c-8.1 .9-14.1 7.8-14.1 15.9v52.8c0 3.7 3 6.8 6.8 6.8c.8 0 1.6-.1 2.4-.4l172.7-64c6.1-2.2 10.1-8 10.1-14.5c0-9.3-8.1-16.5-17.3-15.4zM233.2 512c3.7 0 6.8-3 6.8-6.8V452.6c0-8.1-6.1-14.9-14.1-15.9l-160.6-19c-9.2-1.1-17.3 6.1-17.3 15.4c0 6.5 4 12.3 10.1 14.5l172.7 64c.8 .3 1.6 .4 2.4 .4zM41.7 382.9l170.9 20.2c7.8 .9 13.4-7.5 9.5-14.3l-85.7-150c-5.9-10.4-20.7-10.8-27.3-.8L30.2 358.2c-6.5 9.9-.3 23.3 11.5 24.7zm439.6-24.8L402.9 238.1c-6.5-10-21.4-9.6-27.3 .8L290.2 388.5c-3.9 6.8 1.6 15.2 9.5 14.3l170.1-20c11.8-1.4 18-14.7 11.5-24.6zm-216.9 11l78.4-137.2c6.1-10.7-1.6-23.9-13.9-23.9H183.1c-12.3 0-20 13.3-13.9 23.9l78.4 137.2c3.7 6.4 13 6.4 16.7 0zM174.4 176H337.6c12.2 0 19.9-13.1 14-23.8l-80-144c-2.8-5.1-8.2-8.2-14-8.2h-3.2c-5.8 0-11.2 3.2-14 8.2l-80 144c-5.9 10.7 1.8 23.8 14 23.8z"
-              />
-            </svg>
-            <a href="index.html" aria-label="Click for home.">
-              <p>Antonio Poloni</p>
+            <a class="name" href="index.html" aria-label="Click for home.">
+              Antonio Poloni
             </a>
           </h1>
           <button type="button" tabindex="-1" hidden></button>
           <nav>
             <ul class="menu">
-              <li><a href="#projects-frontendMasters">Frontend Masters</a></li>
-              <li><a href="#projects-freeCodeCamp">freeCodeCamp</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
                 <a
@@ -83,329 +75,259 @@
             </ul>
           </nav>
         </header>
-        <p>Hi, my name is <span class="name">Antonio Poloni</span>.</p>
-        <h2>I'm venturing into the world of programming.</h2>
-        <p>
-          Technology has always been part of my life. Since childhood, I have
-          harbored a passion for games and computers. I hold a degree in
-          Mechanical Engineering, during which I gained experience in creating
-          technical drawings and 3D models using Autodesk AutoCAD and Inventor.
-          My role as a Search Engine Evaluator further deepened my understanding
-          of web page structure and quality.
-        </p>
-        <p>
-          Currently, I am expanding my skill set in web development through
-          <a href="https://frontendmasters.com/" target="_blank"
-            >Frontend Masters</a
-          >
-          and
-          <a href="https://www.freecodecamp.org/" target="_blank"
-            >freeCodeCamp</a
-          >
-          . I recently completed the
-          <a href="https://frontendmasters.com/bootcamp/" target="_blank"
-            >Frontend Masters Bootcamp</a
-          >
-          and the
-          <a
-            href="https://www.freecodecamp.org/certification/antoniopolonijr/responsive-web-design"
-            target="_blank"
-            >Responsive Web Design Certification</a
-          >
-          , two significant steps towards my goal of becoming a web developer.
-        </p>
+
+        <div class="blackbox">
+          <h2>I'm venturing into the world of programming.</h2>
+          <p>
+            Hi, my name is <span class="name">Antonio Poloni</span>. Technology
+            has always been part of my life. Since childhood, I have harbored a
+            passion for games and computers. Currently, I am expanding my skill
+            set in web development through
+            <a href="https://frontendmasters.com/" target="_blank"
+              >Frontend Masters</a
+            >
+            and
+            <a href="https://www.freecodecamp.org/" target="_blank"
+              >freeCodeCamp</a
+            >
+            . I recently completed the
+            <a href="https://frontendmasters.com/bootcamp/" target="_blank"
+              >Frontend Masters Bootcamp</a
+            >
+            and the
+            <a
+              href="https://www.freecodecamp.org/certification/antoniopolonijr/responsive-web-design"
+              target="_blank"
+              >Responsive Web Design Certification</a
+            >
+            , two significant steps towards my goal of becoming a web developer.
+          </p>
+        </div>
       </div>
     </section>
-    <!-- FUTURE FEATURED PROJECTS !
-     
-    <section class="section-featured" id="featured">
+    <section class="section-projects" id="projects">
       <div class="container">
-        <h2>Featured Project</h2>
-        <article>
-          <h3>Feed a Star Mole (DESKTOP)</h3>
-          <img
-            src="./projects/mole-game/aap-mole-game-Screenshot.png"
-            alt="Feed a Star Mole game project screenshot."
-          />
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
+        <h2>Projects</h2>
+        <div class="course" id="freeCodeCamp-responsiveWebDesign">
           <div class="blackbox">
+            <h3>Responsive Web Design</h3>
             <p>
-              That little moles will pop out of holes and the game is to tap
-              them before they go back in their holes. they're hungry little
-              star moles and we're going to feed them worms! After you get 10
-              points, you win the game! There are also more-rare royal star
-              moles that are worth double. If you don't click on a mole in time,
-              the mole frowns and heads back in its hole. If you manage to feed
-              it in time, it smiles happily and disappers back into its hole.
-            </p>
-            <p>
-              <a
-                target="_blank"
-                href="./projects/mole-game/mole.html"
-                class="button"
-                >Play</a
-              >
+              Certified in Responsive Web Design by freeCodeCamp, where I
+              mastered the essentials of HTML for structuring content and CSS
+              for creating visually appealing designs. Through hands-on
+              projects, I built a cat photo app to grasp HTML and CSS basics,
+              explored CSS variables by crafting a penguin, and implemented
+              accessibility best practices with a quiz site. Additionally, I
+              developed responsive webpages using Flexbox for a photo gallery
+              and CSS Grid for a magazine article layout, ensuring optimal
+              viewing across various screen sizes.
             </p>
           </div>
-        </article>
-      </div>
-    </section> -->
-    <section class="section-projects" id="projects-frontendMasters">
-      <div class="container">
-        <h2>Projects at Frontend Masters</h2>
-        <div class="blackbox">
-          <p>
-            I completed the Frontend Masters Bootcamp and Beginner Learning Path
-            to Web Development, gaining essential skills in HTML, CSS, and
-            JavaScript. Through project-based learning, I built and styled web
-            pages, developed interactive features, and gained a solid foundation
-            in web development, preparing me for a professional career in the
-            field.
-          </p>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <figure id="FCC-RWD-magazine">
+                  <a
+                    href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
+                    target="_blank"
+                    ><img
+                      src="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/freeCodeCamp-responsiveWebDesign-magazine-screenshot.png"
+                      alt="Magazine Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
+                      target="_blank"
+                    >
+                      <h4>Magazine</h4>
+                      <p>
+                        In this project, I learned how to use CSS Grid,
+                        including concepts like grid rows and grid columns.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure id="FCC-RWD-documentationPage">
+                  <a
+                    href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
+                    target="_blank"
+                    ><img
+                      src="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage-screenshot.png"
+                      alt="Technical Documentation Page Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
+                      target="_blank"
+                    >
+                      <h4>Documentation Page</h4>
+                      <p>
+                        Required project to earn my certification. I built a
+                        technical documentation page to serve as instruction or
+                        reference for a topic.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure id="FCC-RWD-nutritionLabel">
+                  <a
+                    href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
+                    target="_blank"
+                    ><img
+                      src="./projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/freeCodeCamp-responsiveWebDesign-nutritionLabel-screenshot.png"
+                      alt="Nutrition Label Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
+                      target="_blank"
+                    >
+                      <h4>Nutrition Label</h4>
+                      <p>
+                        In this project, I used typography. I learned how to
+                        style text, adjust line height, and position your text
+                        using CSS.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
         </div>
-        <div class="topgrid">
-          <figure>
-            <a
-              href="projects/Frontend Masters/mole-game/mole.html"
-              target="_blank"
-              ><img
-                src="projects/Frontend Masters/mole-game/aap-mole-game-Screenshot.png"
-                alt="Feed a Star Mole game project screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/Frontend Masters/mole-game/mole.html"
-                target="_blank"
-              >
-                <h3>Feed a Star Mole (DESKTOP)</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/Frontend Masters/word-masters/word-masters.html"
-              target="_blank"
-              ><img
-                src="./projects/Frontend Masters/word-masters/word-masters-screenshot.png"
-                alt="Word Masters Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/Frontend Masters/word-masters/word-masters.html"
-                target="_blank"
-              >
-                <h3>Word Masters (Desktop)</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/Frontend Masters/calculator/calculator.html"
-              target="_blank"
-              ><img
-                src="projects/Frontend Masters/calculator/app-calculator-spec.png"
-                alt="Project Coffee Masters menu screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/Frontend Masters/calculator/calculator.html"
-                target="_blank"
-              >
-                <h3>Calculator</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="bottomgrid">
-          <a href="projects/Frontend Masters/blog/blog.html" target="_blank"
-            ><img
-              src="projects/Frontend Masters/blog/frontendMasters-blog-screenshot.png"
-              alt="Project Alien Blog screenshot."
-          /></a>
-          <a
-            href="projects/Frontend Masters/coffee-masters/index.html"
-            target="_blank"
-            ><img
-              src="projects/Frontend Masters/coffee-masters/Coffee-Masters-Screenshot.png"
-              alt="Coffe Masters Project Screenshot."
-          /></a>
-          <a
-            href="projects/Frontend Masters/forms/forms-end.html"
-            target="_blank"
-            ><img
-              src="projects/Frontend Masters/forms/aap-HTML Forms-Screenshot.png"
-              alt="Project Forms Screenshot."
-          /></a>
-          <a
-            href="projects/Frontend Masters/calculator/calculator.html"
-            target="_blank"
-            ><img
-              src="projects/Frontend Masters/calculator/app-Calculator Project.webp"
-              alt="Calculator Project course logo."
-          /></a>
-          <a
-            href="projects/Frontend Masters/dog-viewer/dog-viewer.html"
-            target="_blank"
-            ><img
-              src="projects/Frontend Masters/dog-viewer/frontendMasters-dogViewer-Screenshot.png"
-              alt="Project Dog Viewer Screenshot."
-          /></a>
-        </div>
-      </div>
-    </section>
-    <section class="section-projects" id="projects-freeCodeCamp">
-      <div class="container">
-        <h2>Projects at freeCodeCamp</h2>
-        <div class="blackbox">
-          <p>
-            Certified in Responsive Web Design, where I mastered the essentials
-            of HTML for structuring content and CSS for creating visually
-            appealing designs. Through hands-on projects, I built a cat photo
-            app to grasp HTML and CSS basics, explored CSS variables by crafting
-            a penguin, and implemented accessibility best practices with a quiz
-            site. Additionally, I developed responsive webpages using Flexbox
-            for a photo gallery and CSS Grid for a magazine article layout,
-            ensuring optimal viewing across various screen sizes.
-          </p>
-        </div>
-        <div class="topgrid">
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
-              target="_blank"
-              ><img
-                src="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/freeCodeCamp-responsiveWebDesign-magazine-screenshot.png"
-                alt="Magazine Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/16 - Magazine/freeCodeCamp-responsiveWebDesign-magazine/index.html"
-                target="_blank"
-              >
-                <h3>Magazine</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
-              target="_blank"
-              ><img
-                src="./projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage-screenshot.png"
-                alt="Technical Documentation Page Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/14 - Technical Documentation Page (Certification Project)/freeCodeCamp-responsiveWebDesign-technicalDocumentationPage/index.html"
-                target="_blank"
-              >
-                <h3>Technical Documentation</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-            <a
-              href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
-              target="_blank"
-              ><img
-                src="./projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/freeCodeCamp-responsiveWebDesign-nutritionLabel-screenshot.png"
-                alt="Nutrition Label Project Screenshot."
-            /></a>
-            <figcaption>
-              <a
-                href="projects/freeCodeCamp - Responsive Web Design/08 - Nutrition Label/freeCodeCamp-responsiveWebDesign-nutritionLabel/index.html"
-                target="_blank"
-              >
-                <h3>Nutrition Label</h3>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="bottomgrid">
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/19 - Penguin/freeCodeCamp-responsiveWebDesign-penguin/index.html"
-            target="_blank"
-            ><img
-              src="projects/freeCodeCamp - Responsive Web Design/19 - Penguin/freeCodeCamp-responsiveWebDesign-penguin/freeCodeCamp-penguin-screenshot.png"
-              alt="Penguin Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/freeCodeCamp-responsiveWebDesign-citySkyline-day-screenshot.png"
-              alt="City Skyline (Day) Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/15 - City Skyline/freeCodeCamp-responsiveWebDesign-citySkyline/freeCodeCamp-responsiveWebDesign-citySkyline-night-screenshot.png"
-              alt="City Skyline (Night) Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/07 - Photo Gallery/freeCodeCamp-responsiveWebDesign-photoGallery/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/07 - Photo Gallery/freeCodeCamp-responsiveWebDesign-photoGallery/freeCodeCamp-responsiveWebDesign-photoGallery-screeshot.png"
-              alt="Photo Gallery Project Screenshot."
-          /></a>
-          <a
-            href="projects/freeCodeCamp - Responsive Web Design/09 - Accessibility Quiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz/index.html"
-            target="_blank"
-            ><img
-              src="./projects/freeCodeCamp - Responsive Web Design/09 - Accessibility Quiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz/freeCodeCamp-responsiveWebDesign-accessibilityQuiz-screenshot.png"
-              alt="Accessibility Quiz Project Screenshot."
-          /></a>
+        <div class="course" id="FrontendMasters-BootCamp-BeginnerLearningPath">
+          <div class="blackbox">
+            <h3>
+              Frontend Masters Bootcamp and Beginner Learning Path to Web
+              Development
+            </h3>
+            <p>
+              I completed the Frontend Masters Bootcamp and Beginner Learning
+              Path to Web Development, gaining essential skills in HTML, CSS,
+              and JavaScript. Through project-based learning, I built and styled
+              web pages, developed interactive features, and gained a solid
+              foundation in web development, preparing me for a professional
+              career in the field.
+            </p>
+          </div>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <figure id="FEM-BTC-moleStar">
+                  <a
+                    href="projects/Frontend Masters/mole-game/mole.html"
+                    target="_blank"
+                    ><img
+                      src="projects/Frontend Masters/mole-game/aap-mole-game-Screenshot.png"
+                      alt="Mole Star Game Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/Frontend Masters/mole-game/mole.html"
+                      target="_blank"
+                    >
+                      <h4>Mole Star Game (Desktop)</h4>
+                      <p>
+                        Created the "Feed-A-Star-Mole" game using HTML, CSS, and
+                        JavaScript. Learned DOM manipulation, event handling,
+                        and game logic to build an interactive and dynamic web
+                        application.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure id="FEM-BLP-wordMasters">
+                  <a
+                    href="projects/Frontend Masters/word-masters/word-masters.html"
+                    target="_blank"
+                    ><img
+                      src="projects/Frontend Masters/word-masters/word-masters-screenshot.png"
+                      alt="Word Masters Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/Frontend Masters/word-masters/word-masters.html"
+                      target="_blank"
+                    >
+                      <h4>Word Masters (Desktop)</h4>
+                      <p>
+                        Developed a Wordle clone using HTML, CSS, and
+                        JavaScript. Implemented gameplay logic, API integration
+                        for word selection, and dynamic UI updates for user
+                        feedback and interactions.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure id="FEM-BTC-calculator">
+                  <a
+                    href="projects/Frontend Masters/calculator/calculator.html"
+                    target="_blank"
+                    ><img
+                      src="projects/Frontend Masters/calculator/frontendMasters-calculator-screenshot.png"
+                      alt="Calculator Project Screenshot."
+                  /></a>
+                  <figcaption>
+                    <a
+                      href="projects/Frontend Masters/calculator/calculator.html"
+                      target="_blank"
+                    >
+                      <h4>Calculator</h4>
+                      <p>
+                        Built a calculator using HTML, CSS, and JavaScript,
+                        focusing on DOM manipulation and event handling.
+                        Implemented basic calculator functions.
+                      </p>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section-contact" id="contact">
+    <footer id="contact">
       <div class="container">
-        <h2>Contact Me</h2>
+        <h2>
+          <a class="name" href="index.html" aria-label="Click for home.">
+            Antonio Poloni
+          </a>
+        </h2>
         <p>
           I’m always up for challenges. Let’s collaborate and create something
           interesting.
         </p>
-        <p>
-          <a href="mailto:antoniopolonijr@gmail.com" class="button">Email me</a>
-        </p>
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-        <h2>Antonio Poloni</h2>
         <ul>
           <li>
             <!-- LinkedIn SVG -->
@@ -451,6 +373,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
                 aria-hidden="true"
+                class="iconMailBox"
               >
                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                 <path
@@ -463,7 +386,7 @@
         <p><small>&copy; 2024 Antonio Poloni. All rights reserved.</small></p>
       </div>
     </footer>
-    <script src="https://unpkg.com/popmotion@8.5.0/dist/popmotion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

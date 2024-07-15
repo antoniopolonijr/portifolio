@@ -5,7 +5,7 @@
     --tan: #b6b57b;
     --green: #31b28a;
     --lightgreen: #8cdfc5;
-    --red: #ff4404;
+    --blue: #05090f;
     --white: #ffffff;
 
     /* font families */
@@ -120,14 +120,12 @@
   }
   img {
     max-width: 100%;
-    object-fit: cover;
   }
   figure {
     margin: 0;
     padding: 0;
   }
   .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -148,65 +146,65 @@
   .button:hover {
     background-color: var(--tan);
   }
+  .blackbox {
+    padding: 1rem;
+    color: white;
+    background-color: var(--black);
+  }
+  .blackbox p {
+    margin: 0;
+  }
 }
 @layer intro {
   .intro {
-    padding: 4rem 0 9rem 0;
-    background-image: /* url(../img/fem-featured-top.png), */ url(../img/app-stars.jpg);
-    background-repeat: /* repeat-x,  */ repeat;
-    background-position: /* bottom center, */ top center;
+    padding: 2rem 0 6rem 0;
+    background: var(--black) url(../img/header-background-img.jpg);
+    background-position: top center;
+    background-size: cover;
     color: var(--white);
   }
   .intro a {
-    color: var(--white);
+    color: var(--lightgreen);
+    text-decoration: none;
   }
   .intro h2 {
     text-transform: uppercase;
     font-size: var(--h4);
-  }
-  .name {
-    font-weight: 700;
-  }
-  .stars {
-    padding: 4rem 0 6rem 0;
-    background-image: url(../img/fem-featured-top.png),
-      url(../img/fem-stars-sky.jpg);
-    background-repeat: repeat-x, repeat;
-    background-position: bottom center, top center;
-  }
-  header + article {
-    max-width: 500px;
+    margin: 0.5rem 0;
   }
 }
 @layer header {
-  /* originally placed so that we could see what we were doing when creating the navbar */
-  /* body {
-    background-color: black;
-} */
   header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6rem;
-    gap: 1rem;
+    margin-bottom: 4rem;
   }
   header h1 {
-    font-size: var(--h3);
-    color: var(--lightgreen);
-    font-weight: 300;
-    margin: 0 1rem;
+    font-size: var(--h1);
+    color: var(--green);
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
   }
-
   header a {
     text-decoration: none;
     color: var(--white);
     vertical-align: middle;
+  }
+  .name {
+    color: var(--green);
+    font-weight: 500;
+  }
+  h1 .name:hover,
+  footer .name:hover {
+    color: var(--lightgreen);
+  }
+  span.name {
+    font-weight: bold;
   }
   header a:hover {
     color: var(--green);
@@ -219,15 +217,7 @@
   header a:hover svg {
     fill: var(--green);
   }
-  .brand {
-    cursor: grab;
-    z-index: 10;
-  }
-  header p {
-    margin: 0;
-    padding: 0;
-    padding-top: 6px;
-  }
+
   nav {
     font-family: var(--heading);
     font-weight: 600;
@@ -251,26 +241,28 @@
   nav .button:hover {
     color: var(--black);
   }
-  @media (max-width: 986px) {
+
+  .course {
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 800px) {
     header {
-      justify-content: center;
-    }
-    header h1 {
-      text-align: center;
+      flex-flow: column wrap;
     }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 426px) {
     header {
-      justify-content: space-between;
-      gap: 0;
+      flex-flow: row wrap;
+      align-items: flex-start;
     }
     header h1 {
-      flex-basis: auto;
+      font-size: var(--h4);
     }
     /* hamburger button is the button HTML element */
     header button {
       display: block;
-      font-size: 40px;
+      font-size: 28px;
       line-height: 1;
       border: 0;
       background: transparent;
@@ -292,9 +284,10 @@
       width: 100vw;
       height: 100vh;
       opacity: 0;
-      background: #fff;
+      background: var(--blue);
       padding-top: 20%;
       transition: right 0s 0.5s, opacity 0.5s;
+      z-index: 1000;
     }
     /* trigger for animation - pulls down nav box */
     button:focus + nav,
@@ -319,15 +312,15 @@
     nav a:any-link:not(.button) {
       display: block;
       padding: 1.5rem;
-      color: var(--green);
+      color: var(--white);
     }
     nav a svg {
-      fill: var(--green);
+      fill: var(--white);
     }
     nav a:hover,
     nav a svg:hover {
-      color: var(--tan);
-      fill: var(--tan);
+      color: var(--green);
+      fill: var(--green);
     }
     /* keep spacing even between link items */
     nav .button {
@@ -344,120 +337,31 @@
       font-size: 3rem;
       line-height: 1;
     }
-    @media (max-width: 450px) {
-      header {
-        justify-content: center;
-        gap: 1rem;
-      }
-    }
-  }
-}
-@layer featured {
-  .section-featured {
-    background-image: url(../img/fem-feature-bottom.png),
-      url(../img/fem-feature-bkgd.png);
-    background-repeat: repeat-x, repeat;
-    background-position: bottom center, center center;
-    padding: 2rem 0 6rem 0;
-  }
-  .project {
-    background-image: url(../img/fem-feature-bkgd.png);
-    background-repeat: repeat;
-    background-position: center center;
-    padding: 6rem 0;
-  }
-  .section-featured h3 {
-    margin: 3rem 0 0 0;
-    padding: 1rem 1rem 0 1rem;
-    color: var(--white);
-    font-size: var(--h4);
-    background-color: var(--black);
-  }
-  .blackbox {
-    padding: 0rem 1rem 1rem 1rem;
-    color: white;
-    background-color: var(--black);
-    border-radius: 0;
-  }
-  .section-featured article {
-    display: grid;
-    grid-template-rows: auto;
-  }
-
-  .section-featured img {
-    grid-row: 1/2;
-    grid-column: 1/2;
-    display: block;
-    margin-top: 1rem;
-  }
-  .section-featured ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 1rem;
-    font-family: var(--mono);
-    text-transform: uppercase;
-    font-size: var(--small);
-    grid-row: 2/3;
-    margin-top: -1.75rem;
-  }
-
-  .section-featured li {
-    background-color: var(--white);
-    padding: 0.5rem;
-    border: 2px solid var(--red);
-  }
-  .youtube {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-
-  @media (max-width: 475px) {
-    .section-featured h2 {
-      font-size: var(--h4);
-    }
-  }
-  @media (max-width: 400px) {
-    .section-featured h2 {
-      font-size: var(--h5);
-    }
-    .section-featured h3 {
-      font-size: var(--h5);
-    }
-    .section-featured ul {
-      background-color: var(--white);
-      padding: 0.5rem;
-      border: 2px solid var(--red);
-    }
-    .section-featured li {
-      background-color: transparent;
-      padding: 0;
-      border: none;
-    }
   }
 }
 @layer projects {
   .section-projects {
-    background-color: var(--black);
-    padding: 2rem 0 3rem 0;
+    background-color: var(--blue);
+    padding: 2rem 0 2rem 0;
     color: var(--white);
   }
   .section-projects h2 {
-    text-align: center;
+    font-size: var(--h3);
+    color: var(--green);
+    margin: 0;
+  }
+  .section-projects h3 {
+    font-size: var(--h4);
+    margin: 0;
+    padding: 0;
   }
   figure {
     display: grid;
     grid-template-rows: 1fr 100px;
   }
   figure img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
-    padding-top: 1rem;
   }
   figure a {
     color: var(--white);
@@ -470,153 +374,95 @@
   }
   figcaption {
     background-color: var(--black);
-    opacity: 0.8;
+    opacity: 0.9;
     text-align: center;
     grid-row: 2/3;
     grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
   }
-  figcaption h3 {
-    margin-bottom: 0;
+  figcaption h4 {
+    margin: 0;
     font-size: var(--h5);
   }
-  figcaption ul {
-    list-style-type: none;
+
+  figcaption p {
     padding: 0;
-    margin: 0 0 2rem 0;
-    font-family: var(--mono);
-    text-transform: uppercase;
-    font-size: var(--small);
+    margin: 0;
+    font-size: var(--base-size);
   }
   figcaption li {
     display: inline-block;
   }
   .topgrid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-  }
-  .topgrid figure:first-child {
-    grid-row: span 2;
-  }
-  .bottomgrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 2rem 0;
-  }
-  .project figure {
-    display: block;
-  }
-  .project figcaption {
-    background-color: transparent;
-    color: var(--black);
-    text-align: left;
-  }
-  figure.featured-screenshots {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem;
-  }
-  .section-featured .featured-screenshots img {
-    grid-column: revert;
-    grid-row: revert;
-  }
-  .featured-screenshots figcaption {
-    grid-column: 1/4;
-    grid-row: 2/3;
-  }
-  .featured-screenshots figcaption p {
-    columns: 2;
-    margin-bottom: 5rem;
-  }
-  .feature-image {
-    display: block;
-    margin: 5rem 0;
-  }
-  figure.figure-portifolio {
-    margin: 5rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-    gap: 2rem;
-  }
-  .figure-portifolio img {
-    margin-top: 0;
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .figure-portifolio figcaption {
-    grid-column: 1/2;
-    grid-row: 1/2;
   }
   .projects-button {
     text-align: center;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1023px) {
+    .topgrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 767px) {
     .topgrid {
       display: block;
     }
     .topgrid figure {
-      margin-bottom: 4rem;
-    }
-    .bottomgrid {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-content: center;
-      gap: 2rem 2rem;
-    }
-    .bottomgrid > * {
-      flex-basis: 30%;
-    }
-    .bottomgrid img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  @media (max-width: 667px) {
-    .bottomgrid {
-      gap: 2rem;
-    }
-    .bottomgrid a {
-      flex-basis: 80%;
-    }
-    .topgrid figure {
       margin-bottom: 2rem;
     }
-    .section-projects h2 {
-      font-size: var(--h5);
-    }
-    figcaption h3 {
+
+    figcaption h4 {
       font-size: var(--base-size);
     }
   }
-}
-@layer contact {
-  .section-contact {
-    text-align: center;
-    padding: 6rem 0;
-    background-color: var(--black);
-    color: var(--white);
-  }
-  .section-contact p:last-child {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  @media (max-width: 426px) {
+    .section-projects h2 {
+      font-size: var(--h5);
+      text-align: center;
+    }
+    .section-projects h3 {
+      font-size: var(--h6);
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    .blackbox p {
+      text-align: center;
+      font-size: var(--small);
+    }
+    .intro h2 {
+      text-transform: uppercase;
+      font-size: var(--h6);
+      text-align: center;
+    }
+    figcaption p {
+      font-size: var(--small);
+    }
   }
 }
 @layer footer {
   footer {
     text-align: center;
     padding: 6rem 0;
-    background: var(--black) url(../img/app-stars.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: var(--black) url(../img/footer-background-img.jpg);
+    background-position: center;
     background-size: cover;
     color: var(--white);
+  }
+  footer h2 {
+    color: var(--green);
+    margin: 2rem 0 3rem 0;
+  }
+
+  footer a {
+    text-decoration: none;
   }
 
   footer ul {
@@ -632,18 +478,18 @@
   footer svg {
     width: 40px;
     fill: var(--white);
+    vertical-align: middle;
   }
+
   footer a:hover svg {
     fill: var(--green);
   }
-  .project + footer {
-    padding-top: 0;
+  .iconMailBox {
+    scale: 1.2;
   }
-  .bottom-trim {
-    background-image: url(../img/fem-featured-bottom.png);
-    background-repeat: repeat-x;
-    background-position: top center;
-    height: 16px;
-    padding-bottom: 4rem;
+  @media (max-width: 426px) {
+    footer h2 {
+      font-size: var(--h3);
+    }
   }
 }

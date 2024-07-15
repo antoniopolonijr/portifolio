@@ -151,7 +151,7 @@
 @layer intro {
   .intro {
     padding: 2rem 0 2rem 0;
-    background-image: url(../../../img/app-stars.jpg);
+    background-image: url(../../../../img/app-stars.jpg);
     background-repeat: repeat;
     background-position: top center;
     color: var(--white);
@@ -388,7 +388,7 @@
   footer {
     text-align: center;
     padding: 2rem 0;
-    background: var(--black) url(../../../img/app-stars.jpg);
+    background: var(--black) url(../../../../img/app-stars.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
