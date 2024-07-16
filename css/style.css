@@ -154,6 +154,13 @@
   .blackbox p {
     margin: 0;
   }
+  .blackbox a {
+    color: var(--lightgreen);
+    text-decoration: none;
+  }
+  .blackbox a:hover {
+    color: var(--green);
+  }
 }
 @layer intro {
   .intro {
@@ -163,14 +170,12 @@
     background-size: cover;
     color: var(--white);
   }
-  .intro a {
-    color: var(--lightgreen);
-    text-decoration: none;
-  }
+
   .intro h2 {
     text-transform: uppercase;
     font-size: var(--h4);
     margin: 0.5rem 0;
+    color: var(--lightgreen);
   }
 }
 @layer header {
@@ -251,7 +256,7 @@
       flex-flow: column wrap;
     }
   }
-  @media (max-width: 426px) {
+  @media (max-width: 500px) {
     header {
       flex-flow: row wrap;
       align-items: flex-start;
@@ -354,6 +359,7 @@
     font-size: var(--h4);
     margin: 0;
     padding: 0;
+    color: var(--lightgreen);
   }
   figure {
     display: grid;
@@ -362,15 +368,6 @@
   figure img {
     width: 100%;
     height: 100%;
-  }
-  figure a {
-    color: var(--white);
-    text-decoration: none;
-    grid-row: 1/3;
-    grid-column: 1/2;
-  }
-  figure a:hover {
-    color: var(--green);
   }
   figcaption {
     background-color: var(--black);
@@ -381,13 +378,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
+    color: var(--white);
   }
   figcaption h4 {
     margin: 0;
     font-size: var(--h5);
+    color: var(--lightgreen);
   }
-
   figcaption p {
     padding: 0;
     margin: 0;
@@ -405,6 +403,15 @@
   .projects-button {
     text-align: center;
   }
+  figure a {
+    color: var(--white);
+    text-decoration: none;
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+  figure a:hover {
+    color: var(--green);
+  }
 
   @media (max-width: 1023px) {
     .topgrid {
@@ -420,12 +427,12 @@
     }
 
     figcaption h4 {
-      font-size: var(--base-size);
+      font-size: var(--h6);
     }
   }
-  @media (max-width: 426px) {
+  @media (max-width: 500px) {
     .section-projects h2 {
-      font-size: var(--h5);
+      font-size: var(--h4);
       text-align: center;
     }
     .section-projects h3 {
@@ -435,15 +442,15 @@
     }
     .blackbox p {
       text-align: center;
-      font-size: var(--small);
     }
     .intro h2 {
       text-transform: uppercase;
       font-size: var(--h6);
       text-align: center;
     }
-    figcaption p {
-      font-size: var(--small);
+    figcaption {
+      grid-row: 3/3;
+      height: 10rem;
     }
   }
 }
@@ -487,7 +494,7 @@
   .iconMailBox {
     scale: 1.2;
   }
-  @media (max-width: 426px) {
+  @media (max-width: 500px) {
     footer h2 {
       font-size: var(--h3);
     }
