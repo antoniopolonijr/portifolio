@@ -256,7 +256,7 @@
       flex-flow: column wrap;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 426px) {
     header {
       flex-flow: row wrap;
       align-items: flex-start;
@@ -363,7 +363,7 @@
   }
   figure {
     display: grid;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 7rem;
   }
   figure img {
     width: 100%;
@@ -425,12 +425,15 @@
     .topgrid figure {
       margin-bottom: 2rem;
     }
+    figure {
+      grid-template-rows: 1fr 10rem;
+    }
 
     figcaption h4 {
       font-size: var(--h6);
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 426px) {
     .section-projects h2 {
       font-size: var(--h4);
       text-align: center;
@@ -494,7 +497,7 @@
   .iconMailBox {
     scale: 1.2;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 426px) {
     footer h2 {
       font-size: var(--h3);
     }
