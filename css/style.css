@@ -144,7 +144,7 @@
   }
 
   .button:hover {
-    background-color: var(--tan);
+    background-color: var(--lightgreen);
   }
   .blackbox {
     padding: 1rem;
