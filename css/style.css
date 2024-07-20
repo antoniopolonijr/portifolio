@@ -363,11 +363,19 @@
   }
   figure {
     display: grid;
-    grid-template-rows: 1fr 7rem;
+    grid-template-rows: 1fr;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
   }
   figure img {
-    width: 100%;
-    height: 100%;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
   }
   figcaption {
     background-color: var(--black);
@@ -378,7 +386,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     color: var(--white);
   }
   figcaption h4 {
@@ -394,12 +402,6 @@
   figcaption li {
     display: inline-block;
   }
-  .topgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-  }
   .projects-button {
     text-align: center;
   }
@@ -413,26 +415,12 @@
     color: var(--green);
   }
 
-  @media (max-width: 1023px) {
-    .topgrid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
   @media (max-width: 767px) {
-    .topgrid {
-      display: block;
-    }
-    .topgrid figure {
-      margin-bottom: 2rem;
-    }
-    figure {
-      grid-template-rows: 1fr 10rem;
-    }
-
-    figcaption h4 {
-      font-size: var(--h6);
+    figcaption {
+      grid-row: 3/3;
     }
   }
+
   @media (max-width: 426px) {
     .section-projects h2 {
       font-size: var(--h4);
@@ -451,9 +439,8 @@
       font-size: var(--h6);
       text-align: center;
     }
-    figcaption {
-      grid-row: 3/3;
-      height: 10rem;
+    figcaption h4 {
+      font-size: var(--h6);
     }
   }
 }
