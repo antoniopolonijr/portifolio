@@ -166,7 +166,7 @@
   .intro {
     padding: 2rem 0;
     background: var(--black)
-      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/header-background-img.jpg);
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/header-background-img.webp);
     background-position: top center;
     background-size: cover;
     color: var(--white);
@@ -463,7 +463,7 @@
     text-align: center;
     padding: 2rem 0;
     background: var(--black)
-      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/footer-background-img.jpg);
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/footer-background-img.webp);
     background-position: center;
     background-size: cover;
     color: var(--white);
