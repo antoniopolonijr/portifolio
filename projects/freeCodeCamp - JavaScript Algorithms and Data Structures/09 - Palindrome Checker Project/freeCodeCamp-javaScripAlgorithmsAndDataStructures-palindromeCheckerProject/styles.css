@@ -127,7 +127,7 @@
   }
   .container {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1rem;
   }
   .button {
     display: inline-block;
@@ -164,8 +164,9 @@
 }
 @layer intro {
   .intro {
-    padding: 2rem 0 6rem 0;
-    background: var(--black) url(../img/header-background-img.webp);
+    padding: 2rem 0;
+    background: var(--black)
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/header-background-img.jpg);
     background-position: top center;
     background-size: cover;
     color: var(--white);
@@ -184,7 +185,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
   }
   header h1 {
     font-size: var(--h1);
@@ -256,7 +256,7 @@
       flex-flow: column wrap;
     }
   }
-  @media (max-width: 426px) {
+  @media (max-width: 500px) {
     header {
       flex-flow: row wrap;
       align-items: flex-start;
@@ -347,13 +347,17 @@
 @layer projects {
   .section-projects {
     background-color: var(--blue);
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .section-projects h2 {
     font-size: var(--h3);
     color: var(--green);
     margin: 0;
+    text-align: center;
   }
   .section-projects h3 {
     font-size: var(--h4);
@@ -363,19 +367,11 @@
   }
   figure {
     display: grid;
-    grid-template-rows: 1fr;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    max-height: 100vh;
-    margin: auto;
+    grid-template-rows: 1fr 100px;
   }
   figure img {
-    padding: 0;
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
   }
   figcaption {
     background-color: var(--black);
@@ -386,7 +382,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     color: var(--white);
   }
   figcaption h4 {
@@ -402,6 +398,12 @@
   figcaption li {
     display: inline-block;
   }
+  .topgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
   .projects-button {
     text-align: center;
   }
@@ -415,13 +417,24 @@
     color: var(--green);
   }
 
-  @media (max-width: 767px) {
-    figcaption {
-      grid-row: 3/3;
+  @media (max-width: 1023px) {
+    .topgrid {
+      grid-template-columns: 1fr 1fr;
     }
   }
+  @media (max-width: 767px) {
+    .topgrid {
+      display: block;
+    }
+    .topgrid figure {
+      margin-bottom: 2rem;
+    }
 
-  @media (max-width: 426px) {
+    figcaption h4 {
+      font-size: var(--h6);
+    }
+  }
+  @media (max-width: 500px) {
     .section-projects h2 {
       font-size: var(--h4);
       text-align: center;
@@ -439,16 +452,18 @@
       font-size: var(--h6);
       text-align: center;
     }
-    figcaption h4 {
-      font-size: var(--h6);
+    figcaption {
+      grid-row: 3/3;
+      height: 10rem;
     }
   }
 }
 @layer footer {
   footer {
     text-align: center;
-    padding: 6rem 0;
-    background: var(--black) url(../img/footer-background-img.webp);
+    padding: 2rem 0;
+    background: var(--black)
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/footer-background-img.jpg);
     background-position: center;
     background-size: cover;
     color: var(--white);
@@ -484,9 +499,104 @@
   .iconMailBox {
     scale: 1.2;
   }
-  @media (max-width: 426px) {
+  @media (max-width: 500px) {
     footer h2 {
       font-size: var(--h3);
     }
+  }
+}
+@layer project {
+  .palindrome-div {
+    width: min(90vw, 450px);
+    min-height: 100px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: var(--black);
+    gap: 1rem;
+  }
+  label {
+    color: var(--lightgreen);
+    font-size: var(--h5);
+    text-align: center;
+  }
+  .palindrome-btn {
+    width: 90px;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--green);
+    color: var(--white);
+    cursor: pointer;
+  }
+  .palindrome-input {
+    height: 42px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+  }
+  .palindrome-input:focus {
+    border-bottom: 3px solid var(--green);
+  }
+  .palindrome-input::placeholder {
+    text-align: center;
+  }
+  .user-input {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .results-div {
+    overflow-y: auto;
+    word-wrap: break-word;
+    color: var(--white);
+    font-size: var(--h5);
+    padding: 0;
+    margin: 10px;
+  }
+  .hidden {
+    display: none;
+  }
+  .palindrome-definition-div {
+    width: min(90vw, 450px);
+    font-size: 1.3rem;
+    min-height: 140px;
+    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .palindrome-definition {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+  }
+  .palindrome-div .button {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--black);
+    padding: 1rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: var(--small);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .palindrome-div .button:hover {
+    background-color: var(--lightgreen);
   }
 }
