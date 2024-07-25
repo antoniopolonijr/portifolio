@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Palindrome Checker</title>
+    <title>Roman Numeral Converter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -83,28 +83,33 @@
     </section>
     <main class="section-projects" id="project">
       <div class="container">
-        <h2 class="title">Palindrome Checker</h2>
-        <div class="palindrome-div">
-          <label for="text-input"
-            >Enter your text to check if it's a palindrome:
-          </label>
-          <input
-            class="palindrome-input"
-            id="text-input"
-            value=""
-            type="text"
-            placeholder="Enter your text here"
-          />
-          <button class="palindrome-btn button" id="check-btn">Check</button>
-          <div class="results-div hidden" id="result"></div>
-        </div>
-        <div class="palindrome-definition-div">
-          <p class="palindrome-definition">
-            <span role="img" aria-label="light-bulb">&#128161;</span>
-            A <dfn>palindrome</dfn> is a word or phrase that can be read the
-            same way forwards and backwards, ignoring punctuation, case, and
-            spacing.
-          </p>
+        <h2 class="title">Roman Numeral Converter</h2>
+        <div class="roman-numeral-converter-div">
+          <form>
+            <label for="number">Enter a number: </label>
+            <input
+              class="roman-numeral-converter-input"
+              id="number"
+              name="number"
+              value=""
+              type="number"
+              placeholder="Enter your number here"
+            />
+            <button
+              type="button"
+              class="roman-numeral-converter-btn button"
+              id="convert-btn"
+            >
+              Convert
+            </button>
+          </form>
+          <div class="blackbox">
+            <div
+              class="roman-numeral-converter-output-div"
+              id="output"
+              for="number"
+            ></div>
+          </div>
         </div>
       </div>
     </main>
