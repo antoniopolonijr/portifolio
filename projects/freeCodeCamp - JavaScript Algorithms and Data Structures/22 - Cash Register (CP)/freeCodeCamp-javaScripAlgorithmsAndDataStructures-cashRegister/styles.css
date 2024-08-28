@@ -1,0 +1,508 @@
+@layer base {
+  :root {
+    /* colors */
+    --black: #000501;
+    --tan: #b6b57b;
+    --green: #31b28a;
+    --lightgreen: #8cdfc5;
+    --blue: #05090f;
+    --white: #ffffff;
+
+    /* font families */
+    --main: "Lato", sans-serif;
+    --heading: "Josefin Sans", sans-serif;
+    --mono: "Fira mono", monospace;
+
+    /* type scale */
+    --base-size: 1rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+    --small: calc(var(--base-size) / var(--scale));
+  }
+
+  /* border box model: https://css-tricks.com/box-sizing/ */
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  /* h/t Scott O'Hara https://css-tricks.com/inclusively-hidden/ */
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  body {
+    font-family: var(--main);
+    line-height: 1.5;
+    font-size: var(--base-size);
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading);
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: var(--h1);
+  }
+  h2 {
+    font-size: var(--h2);
+  }
+  h3 {
+    font-size: var(--h3);
+  }
+  h4 {
+    font-size: var(--h4);
+  }
+  h5 {
+    font-size: var(--h5);
+  }
+  h6 {
+    font-size: var(--h6);
+  }
+  .mono {
+    font-family: var(--mono);
+  }
+
+  .colors {
+    display: flex;
+    /* you could do this with grid as well, but you may need a few more lines of code */
+  }
+  .colors > * {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border: 1px solid black;
+  }
+  .white {
+    background-color: var(--white);
+  }
+  .black {
+    background-color: var(--black);
+  }
+  .tan {
+    background-color: var(--tan);
+  }
+  .green {
+    background-color: var(--green);
+  }
+  .lightgreen {
+    background-color: var(--lightgreen);
+  }
+  .red {
+    background-color: var(--red);
+  }
+  a {
+    color: var(--green);
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .button {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--black);
+    padding: 1rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: var(--small);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .button:hover {
+    background-color: var(--lightgreen);
+  }
+  .blackbox {
+    padding: 1rem;
+    color: white;
+    background-color: var(--black);
+  }
+  .blackbox p {
+    margin: 0;
+  }
+  .blackbox a {
+    color: var(--lightgreen);
+    text-decoration: none;
+  }
+  .blackbox a:hover {
+    color: var(--green);
+  }
+}
+@layer intro {
+  .intro {
+    padding: 2rem 0;
+    background: var(--black)
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/header-background-img.webp);
+    background-position: top center;
+    background-size: cover;
+    color: var(--white);
+  }
+
+  .intro h2 {
+    text-transform: uppercase;
+    font-size: var(--h4);
+    margin: 0.5rem 0;
+    color: var(--lightgreen);
+  }
+}
+@layer header {
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-size: var(--h1);
+    color: var(--green);
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  header a {
+    text-decoration: none;
+    color: var(--white);
+    vertical-align: middle;
+  }
+  .name {
+    color: var(--green);
+    font-weight: 500;
+  }
+  h1 .name:hover,
+  footer .name:hover {
+    color: var(--lightgreen);
+  }
+  span.name {
+    font-weight: bold;
+  }
+  header a:hover {
+    color: var(--green);
+  }
+  header svg {
+    width: 30px;
+    fill: var(--white);
+    vertical-align: middle;
+  }
+  header a:hover svg {
+    fill: var(--green);
+  }
+
+  nav {
+    font-family: var(--heading);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  nav .button {
+    padding: 0.6rem 0.4rem 0.4rem 0.4rem;
+    color: var(--black);
+  }
+  nav .button:hover {
+    color: var(--black);
+  }
+
+  .course {
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 800px) {
+    header {
+      flex-flow: column wrap;
+    }
+  }
+  @media (max-width: 500px) {
+    header {
+      flex-flow: row wrap;
+      align-items: flex-start;
+    }
+    header h1 {
+      font-size: var(--h4);
+    }
+    /* hamburger button is the button HTML element */
+    header button {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      margin: 0 1rem;
+      padding: 0;
+    }
+    header button:hover {
+      color: var(--green);
+    }
+    header button::after {
+      content: "\2630";
+    }
+    /* menu that appears when hamburger is clicked */
+    nav {
+      position: fixed;
+      top: 0;
+      right: 200%;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      background: var(--blue);
+      padding-top: 20%;
+      transition: right 0s 0.5s, opacity 0.5s;
+      z-index: 1000;
+    }
+    /* trigger for animation - pulls down nav box */
+    button:focus + nav,
+    button:focus-within + nav {
+      right: 0;
+      opacity: 1;
+      transition: right 0s, opacity 0.5s;
+    }
+    nav ul {
+      display: block;
+      text-align: center;
+      position: relative;
+      top: -50vh;
+      transition: top 0.5s;
+    }
+    /* trigger for animation - makes the links in motion */
+    button:focus + nav ul,
+    button:focus-within + nav ul {
+      top: 0;
+    }
+    /* styling for links and SVGs in the mobile menu */
+    nav a:any-link:not(.button) {
+      display: block;
+      padding: 1.5rem;
+      color: var(--white);
+    }
+    nav a svg {
+      fill: var(--white);
+    }
+    nav a:hover,
+    nav a svg:hover {
+      color: var(--green);
+      fill: var(--green);
+    }
+    /* keep spacing even between link items */
+    nav .button {
+      margin-top: 1.5rem;
+    }
+    /* sets up the close icon - clicking anywhere not on a link will close the menu */
+    nav ul::after {
+      content: "\2716";
+      color: var(--green);
+      display: block;
+      position: absolute;
+      top: 0.125rem;
+      right: 0.5rem;
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+}
+@layer projects {
+  .section-projects {
+    background-color: var(--blue);
+    padding: 2rem 0;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-projects h2 {
+    font-size: var(--h3);
+    color: var(--green);
+    margin: 0;
+    text-align: center;
+  }
+  .projects-button {
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    .section-projects h2 {
+      font-size: var(--h4);
+      text-align: center;
+    }
+  }
+  .blackbox p {
+    text-align: center;
+  }
+  .intro h2 {
+    text-transform: uppercase;
+    font-size: var(--h6);
+    text-align: center;
+  }
+}
+@layer footer {
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--black)
+      url(https://raw.githubusercontent.com/antoniopolonijr/antoniopolonijr.github.io/master/img/footer-background-img.webp);
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+  }
+  footer h2 {
+    color: var(--green);
+    margin: 2rem 0 3rem 0;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+  }
+  footer svg {
+    width: 40px;
+    fill: var(--white);
+    vertical-align: middle;
+  }
+
+  footer a:hover svg {
+    fill: var(--green);
+  }
+  .iconMailBox {
+    scale: 1.2;
+  }
+  @media (max-width: 500px) {
+    footer h2 {
+      font-size: var(--h3);
+    }
+  }
+}
+@layer project {
+  .project-div {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 20px;
+    margin: 1rem 0;
+    background-color: var(--black);
+    gap: 1rem;
+  }
+  label {
+    color: var(--lightgreen);
+    font-size: var(--h5);
+    text-align: center;
+  }
+  .project-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--green);
+    color: var(--white);
+    cursor: pointer;
+  }
+  .project-input {
+    height: 42px;
+    width: 248px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+  }
+  .project-input:focus {
+    border-bottom: 3px solid var(--green);
+  }
+  .project-input::placeholder {
+    text-align: center;
+  }
+  .user-input {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .project-output-div {
+    border-radius: 5px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    color: var(--white);
+    font-size: 15px;
+    padding: 4px;
+    margin: 0 auto;
+    border: 2px solid var(--green);
+    text-align: center;
+    width: 248px;
+    min-height: 34px;
+  }
+  .project-output-div h3 {
+    font-size: var(--h6);
+    padding: 0;
+    margin: 0;
+  }
+  .hidden {
+    display: none;
+  }
+  .project-div .button {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--black);
+    padding: 1rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: var(--small);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .project-div .button:hover {
+    background-color: var(--lightgreen);
+  }
+}
