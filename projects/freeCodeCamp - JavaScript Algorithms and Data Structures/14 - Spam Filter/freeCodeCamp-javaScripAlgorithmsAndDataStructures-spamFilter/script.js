@@ -12,7 +12,7 @@ const helpRegex = /please help|assist me/i;
 // The alternate sequence | can be used to match either the text on the left or the text on the right of the |. For example, the regular expression /yes|no/ will match either yes or no.
 
 // regular expression you will work on is one that matches mentions of dollar amounts.
-const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
+const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 // You need to match a number before the text dollars. While you could write out 0|1|2 and so on, regular expressions have a feature that makes this easier.
 // A character class is defined by square brackets, and matches any character within the brackets. For example, [aeiou] matches any character in the list aeiou. You can also define a range of characters to match using a hyphen. For example, [a-z] matches any character from a to z.
 // Add a character class to match the digits 0 through 9 to your dollarRegex expression - remember the digit must come before the word dollars, and there should be a space between the digit and the word.
@@ -21,6 +21,7 @@ const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
 // Now that you have your capture group, you can mark the entire pattern as an optional match. The ? quantifier matches zero or one occurrence of the preceding character or group. For example, the regular expression /colou?r/ matches both color and colour, because the u is optional.
 // One last thing with this expression. You don't actually need the match value from your capture group, so you can turn it into a non-capturing group. This will allow you to group the characters together without preserving the result.
 // To create a non-capturing group in a regular expression, you can add ?: after the opening parenthesis of a group. For instance, (?:a|b) will match either a or b, but it will not capture the result.
+// While this expression does match 1 hundred dollars, it will not match 1  hundred  dollars, or 10 dollars. Spam messages can and will find a way to exploit flaws in your detection. Time to improve your regex. Replace the first literal space with the \s* expression. The \s character class matches whitespace, such as spaces, tabs, and new lines. The * quantifier means "match the previous character 0 or more times". Replace the second literal space with \s+. The + quantifier means "match the previous character at least one time".
 
 // regular expression will look for strings like free money
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
