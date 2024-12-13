@@ -1,0 +1,1 @@
+Welcome to my portfolio. I am Antonio Poloni a junior developer. Technology has always been part of my life. Since childhood, I have harbored a passion for games and computers. Explore my projects, certifications, and skills in web design and development.
